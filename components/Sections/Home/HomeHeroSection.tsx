@@ -37,8 +37,18 @@ import image4281113 from '@/public/images/minified/pages/home/hero/hero-poster2.
 import { GiftIcon } from '@heroicons/react/16/solid'
 // import { StarIcon } from '@heroicons/react/24/outline'
 
-const testimonialsHeroGoogleLogo = <LogoGoogle className="w-12 text-primary-400 group-hover:text-white transition-colors" useDefaultColor={false}  />
-const testimonialsHeroFacebookLogo = <LogoFacebook className="w-14" pathClassName='text-primary-400 group-hover:text-white transition-colors' />
+const testimonialsHeroGoogleLogo = (
+    <LogoGoogle
+        className="w-12 text-primary-400 transition-colors group-hover:text-white"
+        useDefaultColor={false}
+    />
+)
+const testimonialsHeroFacebookLogo = (
+    <LogoFacebook
+        className="w-14"
+        pathClassName="text-primary-400 group-hover:text-white transition-colors"
+    />
+)
 
 const testimonialsHero: InterfaceItemReview[] = [
     {
@@ -90,7 +100,7 @@ export function HomeHeroSection() {
                     <div className="h-52 w-full bottom-14 fixed bg-gradient-to-t from-secondary-950 via-secondary-950"></div> */}
                 <div
                     // className="absolute inset-0 size-full bg-cover bg-fixed opacity-30 sm:opacity-60 lg:opacity-100"
-                    className="absolute inset-0 size-full bg-cover bg-fixed opacity-30 sm:opacity-60 lg:opacity-100 [background-position:53%_0%] sm:bg-left-top  hero-background-image"></div>
+                    className="hero-background-image absolute inset-0 size-full bg-cover bg-fixed opacity-30 [background-position:53%_0%] sm:bg-left-top sm:opacity-60 lg:opacity-100"></div>
                 <div className="absolute inset-0 bg-gradient-to-tr from-secondary-950 from-0% via-secondary-950 via-70% lg:via-50%"></div>
                 {/* <svg
                     className="absolute inset-0 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -115,33 +125,29 @@ export function HomeHeroSection() {
                 </svg> */}
                 {/* <HeroBackgroundGraphics /> */}
                 <div
-          aria-hidden="true"
-          className="hidden min-[522px]:block lg:hidden absolute inset-x-0 top-[calc(100%-13rem)] transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] -translate-y-3/4"
-        >
-          <div
-            style={{
-              clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-            }}
-            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-secondary-500 to-secondary-800 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-          />
-        </div>
+                    aria-hidden="true"
+                    className="absolute inset-x-0 top-[calc(100%-13rem)] hidden -translate-y-3/4 transform-gpu overflow-hidden blur-3xl min-[522px]:block sm:top-[calc(100%-30rem)] lg:hidden">
+                    <div
+                        style={{
+                            clipPath:
+                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                        }}
+                        className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-secondary-500 to-secondary-800 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                    />
+                </div>
 
-        {/* <div className="absolute translate-y-[-30rem] top-0 left-0 rounded-full size-[100rem] -translate-x-1/2 gradient-primary"></div> */}
-        {/* <div className="hidden -translate-x-[25rem]  lg:block absolute top-0 translate-y-[30rem] left-0 rounded-full size-[100rem]  gradient-primary"></div> */}
-        
-        
-              
-      
+                {/* <div className="absolute translate-y-[-30rem] top-0 left-0 rounded-full size-[100rem] -translate-x-1/2 gradient-primary"></div> */}
+                {/* <div className="hidden -translate-x-[25rem]  lg:block absolute top-0 translate-y-[30rem] left-0 rounded-full size-[100rem]  gradient-primary"></div> */}
+
                 <SectionContainer className="relative 2xl:max-w-screen-2xl">
-                <MyImage
-                    src={imageLogoSecondaryDark}
-                    className="absolute  left-0 -bottom-24 lg:-bottom-96 w-[37rem] h-auto -translate-x-1/2"
-                    alt="Lagos Pressure Washing Logo"
-                    sizes="1184px"
-                    backgroundColor=""
-                    placeholder="empty"
-                />
+                    <MyImage
+                        src={imageLogoSecondaryDark}
+                        className="absolute -bottom-24 left-0 h-auto w-[37rem] -translate-x-1/2 lg:-bottom-96"
+                        alt="Lagos Pressure Washing Logo"
+                        sizes="1184px"
+                        backgroundColor=""
+                        placeholder="empty"
+                    />
                     <div
                         aria-hidden="true"
                         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden opacity-30 blur-3xl sm:top-[-20rem]">
@@ -158,7 +164,6 @@ export function HomeHeroSection() {
                         className="gap-y-24 sm:gap-y-28 2xl:grid-cols-12">
                         <div className="lg:pr-4 lg:pt-4 2xl:col-span-5">
                             <div className="lg:max-w-lg">
-                                
                                 {/* <div className="mb-6 relative inline-flex items-center rounded-full text-[0.8125rem] font-semibold">
                                     <GiftIcon
                                         className="mr-2 h-4 w-4 text-primary-400"
@@ -219,7 +224,8 @@ export function HomeHeroSection() {
                                 <SectionTitleBig
                                     tag="h1"
                                     className="mt-2 text-balance">
-                                    Professional pressure washing services Raleigh NC
+                                    Professional pressure washing services
+                                    Raleigh NC
                                     {/* {' '} */}
                                     {/* <span className="relative whitespace-nowrap">
                                         <Underline className="absolute left-0 top-1/2 h-[0.9em] w-full fill-primary-400"/>
@@ -239,7 +245,9 @@ export function HomeHeroSection() {
                                     surrounding areas.
                                 </SectionBodySmall>
                                 <div className="mt-10 flex flex-wrap items-center gap-4">
-                                    <RoundedButtonWithIcon href={getPageById(4).href} prefetch={false}>
+                                    <RoundedButtonWithIcon
+                                        href={getPageById(4).href}
+                                        prefetch={false}>
                                         Get my free estimate
                                     </RoundedButtonWithIcon>
 
@@ -248,7 +256,7 @@ export function HomeHeroSection() {
                                     </p>
                                 </div>
                                 <StackReviewsSpotlight className="mt-10 origin-left scale-[0.85]" />
-                                <div className="mt-10 flex flex-wrap gap-4 scale-[0.85] origin-left">
+                                <div className="mt-10 flex origin-left scale-[0.85] flex-wrap gap-4">
                                     <ItemReviewsSummaryCard
                                         className="bg-white"
                                         href={app.googleReviewPageHref}
@@ -320,18 +328,17 @@ export function HomeHeroSection() {
                                 patternClassName="text-secondary-900"
                             /> */}
                             <PatternHexagon
-                                className="absolute right-0 top-1/2 ml-2 -mt-12 hidden size-96 translate-x-1/2 min-[522px]:block sm:translate-x-[15%] lg:left-0 lg:-translate-x-[20%] 2xl:translate-x-0"
+                                className="absolute right-0 top-1/2 -mt-12 ml-2 hidden size-96 translate-x-1/2 min-[522px]:block sm:translate-x-[15%] lg:left-0 lg:-translate-x-[20%] 2xl:translate-x-0"
                                 patternClassName="text-primary-400"
                             />
 
-                            <div className="hidden min-[595px]:block absolute -right-14 bottom-1/2 translate-y-7 scale-[0.6] lg:hidden lg:right-full lg:translate-y-7 min-[1245px]:block 2xl:-translate-y-14 2xl:right-[89%] 2xl:scale-100">
-                                <SparkleMedium className="absolute size-24 translate-y-[9rem] -translate-x-[6.5rem] text-primary-200"/>
-                                
-                                <SparkleMedium className="absolute scale-[0.7] size-20 translate-y-[9.5rem] -translate-x-[6rem] text-secondary-950"/>
+                            <div className="absolute -right-14 bottom-1/2 hidden translate-y-7 scale-[0.6] min-[595px]:block lg:right-full lg:hidden lg:translate-y-7 min-[1245px]:block 2xl:right-[89%] 2xl:-translate-y-14 2xl:scale-100">
+                                <SparkleMedium className="absolute size-24 -translate-x-[6.5rem] translate-y-[9rem] text-primary-200" />
+
+                                <SparkleMedium className="absolute size-20 -translate-x-[6rem] translate-y-[9.5rem] scale-[0.7] text-secondary-950" />
                                 {/* <SparkleMedium className="absolute scale-[0.2] size-20 translate-y-[9.5rem] -translate-x-[6rem] text-primary-400"/> */}
-                                
-                                <SparkleMedium className="absolute size-4 translate-y-[10rem] -translate-x-[2rem] text-white rotate-45 lg:-translate-x-[5.5rem]"/>
-                                
+
+                                <SparkleMedium className="absolute size-4 -translate-x-[2rem] translate-y-[10rem] rotate-45 text-white lg:-translate-x-[5.5rem]" />
                             </div>
 
                             {/* <div className="absolute left-0 right-0 top-6 w-full max-w-[30rem] -translate-y-[4rem] lg:top-0 lg:max-w-none lg:-translate-y-[4.6rem] xl:-translate-y-[4rem]">
@@ -369,7 +376,12 @@ export function HomeHeroSection() {
                                 videoExtension="mp4"
                                 // videoId="xsfyb1pStdw"
                             /> */}
-                            <HexagonImage className="mr-auto max-w-[30rem] lg:mr-0 lg:max-w-[34rem] 2xl:max-w-[37rem]" imageClassName='object-cover' src={image4281113} alt="home" sizes="
+                            <HexagonImage
+                                className="mr-auto max-w-[30rem] lg:mr-0 lg:max-w-[34rem] 2xl:max-w-[37rem]"
+                                imageClassName="object-cover"
+                                src={image4281113}
+                                alt="home"
+                                sizes="
                                     (min-width: 1024px) 50vw,
                                     (min-width: 539px) 960px,
                                     100vw">
@@ -385,8 +397,7 @@ export function HomeHeroSection() {
                                     Make memories anywhere
                                 </div>
                             </HexagonImage>
-                               
-                            
+
                             {/* <HexagonVideoHero
                                 className="mr-auto max-w-[30rem] lg:mr-0 lg:max-w-[34rem] 2xl:max-w-[37rem]"
                                 iconBoxClassName="absolute bottom-0 right-0 -translate-x-1/2 min-[450px]:-translate-x-full min-[450px]:-translate-y-1/2 lg:-translate-y-[90%] lg:-translate-x-[150%] xl:-translate-y-[140%]"

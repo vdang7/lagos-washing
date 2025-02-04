@@ -11,7 +11,8 @@ const GA_MEASUREMENT_ID =
 
 const canonicalURL = app.siteUrl
 const title = `Raleigh pressure washing company near me - ${app.companyName}`
-const description = 'Raleigh\'s top-rated pressure washing pressure washing services for residential and commercial properties. Serving Raleigh, Cary, Wake Forest & surrounding areas. Get 15% off your first service. Call or text 919-526-0633 now for your free pressure washing estimate.'
+const description =
+    "Raleigh's top-rated pressure washing pressure washing services for residential and commercial properties. Serving Raleigh, Cary, Wake Forest & surrounding areas. Get 15% off your first service. Call or text 919-526-0633 now for your free pressure washing estimate."
 
 export const metadata = {
     metadataBase: new URL(app.siteUrl),

@@ -77,7 +77,7 @@ export function ItemReviewCardWithStars(
                                     </span>
                                 </div>
                             </MyLink>
-                            <div className="text-gray-600 text-xs">
+                            <div className="text-xs text-gray-600">
                                 {props.authorSubtitle}
                             </div>
                         </div>

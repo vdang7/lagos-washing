@@ -21,7 +21,9 @@ export function AboutFounderSection() {
             <Section className="bg-white pt-32">
                 <div className={outerContainerClassName}>
                     <SectionContainer className={sectionContainerClassName}>
-                        <InteriorSubtitle tag="p">Meet the founder</InteriorSubtitle>
+                        <InteriorSubtitle tag="p">
+                            Meet the founder
+                        </InteriorSubtitle>
                         <InteriorTitle tag="h2" className="mt-2">
                             Founded by Derek Lagos
                         </InteriorTitle>
@@ -49,15 +51,16 @@ export function AboutFounderSection() {
                         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
                             <div className="max-w-lg">
                                 <p className="text-base/7 text-gray-600">
-                                    Hello, I&apos;m Derek, a Raleigh native and a proud graduate
-                                    of Leesville Road High School. I&apos;m dedicated
-                                    to delivering the best
-                                    pressure washing services that homeowners
-                                    and businesses rely on. Whether it&apos;s a
-                                    residential property or a commercial
-                                    location, I approach every project with
-                                    attention to detail and a commitment to
-                                    achieving results that exceed expectations.
+                                    Hello, I&apos;m Derek, a Raleigh native and
+                                    a proud graduate of Leesville Road High
+                                    School. I&apos;m dedicated to delivering the
+                                    best pressure washing services that
+                                    homeowners and businesses rely on. Whether
+                                    it&apos;s a residential property or a
+                                    commercial location, I approach every
+                                    project with attention to detail and a
+                                    commitment to achieving results that exceed
+                                    expectations.
                                     {/* A Raleigh native and a Leesville Road High School graduate, Derek has built a reputation for excellence, consistently delivering exceptional pressure washing services that homeowners and businesses rely on. Whether it’s a home or a business location, Derek approaches every project with attention to detail and a commitment to delivering results that exceed expectations. */}
                                     {/* My journey began when I volunteered to help
                                     a friend with a property cleanup. That
@@ -84,9 +87,8 @@ export function AboutFounderSection() {
                                     5-star rating, supported by over 23 reviews
                                     on Google and Facebook. With a track record
                                     of excellence and a loyal customer base, I’m
-                                    committed to continuing to deliver
-                                    the best pressure washing services for
-                                    years to come.
+                                    committed to continuing to deliver the best
+                                    pressure washing services for years to come.
                                 </p>
                                 <div className="mt-6">
                                     <RoundedButtonWithIcon
@@ -107,8 +109,8 @@ export function AboutFounderSection() {
                                         (min-width: 582px) 1024px,
                                         100vw"
                                     />
-                                    
-                                    <div className="block text-right font-semibold text-sm/4 text-white absolute bottom-4 right-5">
+
+                                    <div className="absolute bottom-4 right-5 block text-right text-sm/4 font-semibold text-white">
                                         Downtown <br /> Raleigh
                                     </div>
                                     <div className="absolute bottom-0 top-1/2 aspect-[1/1] h-[75%] -translate-y-1/2 overflow-hidden rounded-xl md:h-72 md:w-72 lg:h-64 min-[1123px]:h-72">

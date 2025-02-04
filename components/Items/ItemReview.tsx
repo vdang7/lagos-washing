@@ -25,10 +25,7 @@ export function ItemReview(props: InterfaceItemReview) {
 
             <div className="-mx-1 mb-3 flex space-x-1.5 text-primary-500">
                 {[0, 1, 2, 3, 4].map((index) => (
-                    <IconStar
-                        key={index}
-                        className="h-5 w-5 flex-none"
-                    />
+                    <IconStar key={index} className="h-5 w-5 flex-none" />
                 ))}
             </div>
 
@@ -64,7 +61,7 @@ export function ItemReview(props: InterfaceItemReview) {
                                     Verified customer
                                     <div className="absolute -top-px left-1/2 flex h-[2px] w-32 -translate-x-1/2 scale-x-flip">
                                         <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#cbd5e1_32.29%,rgba(0,130,205,0.3)_67.19%,rgba(0,130,205,0)_100%)]"></div>
-                                        <div className="opacity-30 -ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#cbd5e1_32.29%,rgba(0,130,205,0.3)_67.19%,rgba(0,130,205,0)_100%)]"></div>
+                                        <div className="-ml-[100%] w-full flex-none opacity-30 blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#cbd5e1_32.29%,rgba(0,130,205,0.3)_67.19%,rgba(0,130,205,0)_100%)]"></div>
                                     </div>
                                 </span>
                             </div>

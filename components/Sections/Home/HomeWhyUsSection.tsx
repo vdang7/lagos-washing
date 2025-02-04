@@ -102,7 +102,7 @@ function SatisfactionCard() {
                         alt=""
                         sizes="880px"
                         backgroundColor=""
-                        placeholder='empty'
+                        placeholder="empty"
                     />
                 </div>
             </div>
@@ -113,7 +113,7 @@ function SatisfactionCard() {
 function ProfessionalCard() {
     return (
         <>
-            <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-primary-200 lg:bg-secondary-500/10 border border-primary-100 lg:border-primary-500/5 px-7 py-10 text-center">
+            <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl border border-primary-100 bg-primary-200 px-7 py-10 text-center lg:border-primary-500/5 lg:bg-secondary-500/10">
                 <ShieldCheckIcon
                     className="absolute bottom-0 left-0 w-32 -translate-x-1/2 translate-y-[63%] text-primary-100 lg:text-primary-500/20"
                     strokeWidth={0.3}
@@ -137,7 +137,7 @@ function ProfessionalCard() {
                         />
                     </div>
                 </div>
-                <span className="text-primary-700 lg:text-primary-400 mt-4 block text-sm font-medium">
+                <span className="mt-4 block text-sm font-medium text-primary-700 lg:text-primary-400">
                     Professionals
                 </span>
                 <p className="mt-1 block text-lg/6 font-semibold tracking-tighter text-gray-900 lg:text-white">
@@ -152,7 +152,7 @@ function CoreValuesCard({ className }: { className?: string }) {
     return (
         <>
             <div
-                className={`${className} flex-col items-center rounded-3xl bg-secondary-500/10 min-[600px]:border-primary-200 min-[600px]:border min-[600px]:bg-primary-400 min-[600px]:[background-image:--buttonPrimaryGradient] p-8 text-center`}>
+                className={`${className} flex-col items-center rounded-3xl bg-secondary-500/10 p-8 text-center min-[600px]:border min-[600px]:border-primary-200 min-[600px]:bg-primary-400 min-[600px]:[background-image:--buttonPrimaryGradient]`}>
                 <span className="text-gradient-primary text-sm font-medium min-[600px]:text-primary-950">
                     Our core values
                 </span>
@@ -210,7 +210,7 @@ function CoreValuesCard({ className }: { className?: string }) {
 function SaveCard() {
     return (
         <>
-            <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-secondary-500/10 border border-primary-500/5 px-7 py-10 text-center">
+            <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl border border-primary-500/5 bg-secondary-500/10 px-7 py-10 text-center">
                 <p className="relative text-3xl/7 font-semibold tracking-tighter min-[735px]:text-4xl/8">
                     <span className="text-gradient-primary">
                         Save time <br />
@@ -245,22 +245,23 @@ function SaveCard() {
 
 function ReviewsCard() {
     return (
-        <div className="flex rounded-3xl bg-primary-400 min-[600px]:bg-secondary-500/10 border border-primary-300 min-[600px]:border-primary-500/5 px-7 pt-10 pb-6 min-[600px]:[flex:0.9] min-[620px]:flex-initial">
+        <div className="flex rounded-3xl border border-primary-300 bg-primary-400 px-7 pb-6 pt-10 min-[600px]:border-primary-500/5 min-[600px]:bg-secondary-500/10 min-[600px]:[flex:0.9] min-[620px]:flex-initial">
             <div className="mx-auto flex flex-col lg:items-start">
                 <StackAvatars />
 
                 <p className="mt-6 max-w-[15rem] text-balance text-lg/6 font-semibold text-primary-950 min-[600px]:text-primary-200">
                     Rated{' '}
-                    <span className="text-secondary-900 min-[600px]:text-primary-400">5/5 stars</span>{' '}
-                    based on{' '}
-                    21 reviews
-                    from families and businesses in The Triangle.
+                    <span className="text-secondary-900 min-[600px]:text-primary-400">
+                        5/5 stars
+                    </span>{' '}
+                    based on 21 reviews from families and businesses in The
+                    Triangle.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-x-4 gap-y-3 text-xs text-primary-950 min-[600px]:text-primary-200">
                     <MyLink
                         href={app.googleReviewPageHref}
                         rel={null}
-                        className="flex items-center bg-primary-200/30 min-[600px]:bg-primary-400/10 px-2 py-1.5 rounded-full hover:-translate-y-1 hover:translate-x-1 transition-transform">
+                        className="flex items-center rounded-full bg-primary-200/30 px-2 py-1.5 transition-transform hover:-translate-y-1 hover:translate-x-1 min-[600px]:bg-primary-400/10">
                         <MyImage
                             src={imagegoogle}
                             className="mr-2 size-3"
@@ -274,7 +275,7 @@ function ReviewsCard() {
                     <MyLink
                         href={app.facebookReviewPageHref}
                         rel={null}
-                        className="flex items-center bg-primary-200/30 min-[600px]:bg-primary-400/10 px-2 py-1.5 rounded-full hover:-translate-y-1 hover:translate-x-1 transition-transform">
+                        className="flex items-center rounded-full bg-primary-200/30 px-2 py-1.5 transition-transform hover:-translate-y-1 hover:translate-x-1 min-[600px]:bg-primary-400/10">
                         <MyImage
                             src={imagefb}
                             className="mr-2 size-3"
@@ -346,34 +347,41 @@ export function HomeWhyUsSection() {
             <Section
                 className="isolate overflow-hidden bg-secondary-950"
                 headerTheme="header-secondary-dark">
-                    <div className="absolute inset-0 pattern-logo-secondary-dark  [background-size:10rem] -z-10"></div>
-                <Divider className="h-24 w-full -translate-y-px scale-x-flip pb-12 sm:h-auto" pathTwoClassName="text-primary-400" pathFourClassName="stroke-primary-200" />
-                
+                <div className="pattern-logo-secondary-dark absolute inset-0 -z-10 [background-size:10rem]"></div>
+                <Divider
+                    className="h-24 w-full -translate-y-px scale-x-flip pb-12 sm:h-auto"
+                    pathTwoClassName="text-primary-400"
+                    pathFourClassName="stroke-primary-200"
+                />
+
                 {/* <GradientSecondaryDark /> */}
                 {/* <HeroBackgroundGraphics /> */}
                 {/* <div className="absolute pattern-star inset-0 -z-10 opacity-25"></div> */}
                 {/* <div className="absolute inset-0 size-full bg-stars opacity-[0.6]"></div>
                 <div className="absolute inset-0 size-full bg-twinkling"></div>          */}
                 <div
-          aria-hidden="true"
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        >
-          <div
-            style={{
-              clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-            }}
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-secondary-900 to-secondary-900 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-          />
-        </div>
+                    aria-hidden="true"
+                    className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+                    <div
+                        style={{
+                            clipPath:
+                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                        }}
+                        className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-secondary-900 to-secondary-900 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                    />
+                </div>
                 <SectionContainer className="relative">
                     <div className="min-[485px]:text-center">
                         <h3 className="text-sm font-medium">
-                            <span className="text-gradient-primary ">
-                            Lagos difference</span>
+                            <span className="text-gradient-primary">
+                                Lagos difference
+                            </span>
                         </h3>
-                        <h2 className="mx-auto mt-2 text-balance text-[1.75rem] font-semibold leading-7 tracking-tight text-white lg:text-3xl min-[431px]:max-w-xl min-[850px]:max-w-none">
-                            Why homeowners & businesses in Raleigh <span className="text-gradient-primary">choose us</span>
+                        <h2 className="mx-auto mt-2 text-balance text-[1.75rem] font-semibold leading-7 tracking-tight text-white min-[431px]:max-w-xl min-[850px]:max-w-none lg:text-3xl">
+                            Why homeowners & businesses in Raleigh{' '}
+                            <span className="text-gradient-primary">
+                                choose us
+                            </span>
                         </h2>
                     </div>
                     <div className="mx-auto mt-16 flex max-w-md flex-col gap-4 min-[600px]:max-w-none lg:flex-row">

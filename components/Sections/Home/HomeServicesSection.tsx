@@ -64,7 +64,7 @@ function ItemComponent({
                     data-slot="item-service-image-wrapper"
                     className="aspect-h-9 aspect-w-16 relative">
                     <MyImage
-                        className={`${imageClassName} w-full object-cover  transition duration-500 group-hover:brightness-110 group-hover:scale-110`}
+                        className={`${imageClassName} w-full object-cover transition duration-500 group-hover:scale-110 group-hover:brightness-110`}
                         src={imageSrc}
                         sizes={imageSizes}
                         alt={imageAlt}
@@ -74,7 +74,7 @@ function ItemComponent({
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-transparent mix-blend-multiply" /> */}
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-secondary-900 via-transparent mix-blend-multiply" /> */}
-                <div className="absolute h-[55%] bottom-0 w-full bg-gradient-to-t from-black/80"></div>
+                <div className="absolute bottom-0 h-[55%] w-full bg-gradient-to-t from-black/80"></div>
                 <MyImage
                     className="absolute right-3 top-3 h-auto w-6"
                     sizes="48px"
@@ -98,7 +98,7 @@ const bottomItemsImageSizes = `
             50vw
         `
 
-const serviceHref= getPageById(4)
+const serviceHref = getPageById(4)
 const topItems: InterfaceItem[] = [
     {
         id: 3423,
@@ -253,9 +253,11 @@ export function HomeServicesSection() {
 
                     <div className="mx-auto max-w-2xl lg:text-center">
                         <StackReviewsSpotlight className="mb-6 origin-left scale-90 lg:origin-center lg:justify-center [&_[data-slot=my-image]]:lg:ring-gray-200 [&_[data-slot=stack-reviews-spotlight-box]]:lg:border-gray-100 [&_[data-slot=stack-reviews-spotlight-box]]:lg:ring-primary-50" />
-                        <SectionTitle tag="h2" className="mt-2 text-balance relative lg:text-[2.8rem] lg:leading-[2.8rem]">
+                        <SectionTitle
+                            tag="h2"
+                            className="relative mt-2 text-balance lg:text-[2.8rem] lg:leading-[2.8rem]">
                             <svg
-                                className="hidden lg:block absolute scale-x-flip size-6 -translate-y-3 -translate-x-1"
+                                className="absolute hidden size-6 -translate-x-1 -translate-y-3 scale-x-flip lg:block"
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlnsXlink="http://www.w3.org/1999/xlink"
                                 width="371"
@@ -264,8 +266,7 @@ export function HomeServicesSection() {
                                 height="432"
                                 preserveAspectRatio="xMidYMid meet"
                                 aria-hidden="true"
-                                version="1.0"
-                            >
+                                version="1.0">
                                 <path
                                     className="text-primary-200"
                                     fill="currentColor"
@@ -288,10 +289,13 @@ export function HomeServicesSection() {
                                     fill-rule="nonzero"
                                 />
                             </svg>
-
                             {/* Our pressure washing services */}
                             {/* Make your property shine bright without the hassle */}
-                            Get <span className="text-gradient-primary-dark">the best</span> pressure washing services in Raleigh, NC today
+                            Get{' '}
+                            <span className="text-gradient-primary-dark">
+                                the best
+                            </span>{' '}
+                            pressure washing services in Raleigh, NC today
                         </SectionTitle>
                         <div className="mt-4 flex flex-wrap gap-x-8 gap-y-3 text-sm text-[--sectionBodyColor] lg:justify-center">
                             <div className="flex items-center">
@@ -320,7 +324,7 @@ export function HomeServicesSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-16 grid grid-cols-1 min-[450px]:grid-cols-2 gap-3 [&>:last-child_[data-slot=item-service-image-wrapper]]:min-[590px]:aspect-h-4 [&>:last-child_[data-slot=item-service-image-wrapper]]:lg:aspect-h-9 min-[590px]:grid-cols-6 lg:grid-cols-10 lg:gap-6 [&>:last-child]:min-[590px]:col-span-full [&>:last-child]:lg:col-span-2">
+                    <div className="mt-16 grid grid-cols-1 gap-3 [&>:last-child_[data-slot=item-service-image-wrapper]]:min-[590px]:aspect-h-4 [&>:last-child_[data-slot=item-service-image-wrapper]]:lg:aspect-h-9 min-[450px]:grid-cols-2 min-[590px]:grid-cols-6 lg:grid-cols-10 lg:gap-6 [&>:last-child]:min-[590px]:col-span-full [&>:last-child]:lg:col-span-2">
                         {topItems.map((item) => (
                             <ItemComponent
                                 key={item.id}
@@ -331,10 +335,10 @@ export function HomeServicesSection() {
                                 imageAlt={item.imageAlt}
                                 imageSizes={item.imageSizes}
                                 imagePriority={item.imagePriority}>
-                                <ItemTitleTag className="absolute bottom-0 max-w-[90%] text-balance pb-5 pl-4 text-lg/4 md:text-xl/4 font-semibold  text-white transition-transform duration-[600ms] group-hover:-translate-y-5 lg:max-w-none lg:pl-5 lg:text-2xl">
+                                <ItemTitleTag className="absolute bottom-0 max-w-[90%] text-balance pb-5 pl-4 text-lg/4 font-semibold text-white transition-transform duration-[600ms] group-hover:-translate-y-5 md:text-xl/4 lg:max-w-none lg:pl-5 lg:text-2xl">
                                     {item.title}
                                 </ItemTitleTag>
-                                <span className="absolute bottom-0 flex translate-y-7 items-center pl-4 text-xs text-primary-200 opacity-0 duration-[600ms] ease-in-out group-hover:-translate-y-3.5 group-hover:opacity-100  lg:pl-5 lg:text-sm lg:group-hover:-translate-y-4">
+                                <span className="absolute bottom-0 flex translate-y-7 items-center pl-4 text-xs text-primary-200 opacity-0 duration-[600ms] ease-in-out group-hover:-translate-y-3.5 group-hover:opacity-100 lg:pl-5 lg:text-sm lg:group-hover:-translate-y-4">
                                     Get my free estimate
                                     <IconChevronAnimated
                                         className="ml-2 mt-0.5"
@@ -355,7 +359,7 @@ export function HomeServicesSection() {
                                 imageSizes={item.imageSizes}
                                 imagePriority={item.imagePriority}>
                                 <div className="absolute bottom-0 h-16 w-full translate-y-3 bg-gradient-to-t from-[#041D2F] via-[#041D2F] opacity-0 duration-[600ms] ease-in-out [transition-property:opacity,transform] group-hover:translate-y-0 group-hover:opacity-80" />
-                                <ItemTitleTag className="absolute bottom-0 max-w-[90%] text-balance pb-5 pl-4 text-lg/4 font-semibold  text-white transition-transform duration-[600ms] group-hover:-translate-y-4 lg:group-hover:-translate-y-5  lg:max-w-none lg:pb-3 lg:text-base/4 xl:text-lg xl:group-hover:-translate-y-4">
+                                <ItemTitleTag className="absolute bottom-0 max-w-[90%] text-balance pb-5 pl-4 text-lg/4 font-semibold text-white transition-transform duration-[600ms] group-hover:-translate-y-4 lg:max-w-none lg:pb-3 lg:text-base/4 lg:group-hover:-translate-y-5 xl:text-lg xl:group-hover:-translate-y-4">
                                     {item.title}
                                 </ItemTitleTag>
 
@@ -369,34 +373,35 @@ export function HomeServicesSection() {
                             </ItemComponent>
                         ))}
                     </div>
-                    <div className="w-full flex justify-center mt-12">
-                    <div className="border border-gray-100 inline-flex pl-4 pr-5 rounded-2xl py-3 justify-center min-[491px]:items-center relative isolate">
-                        <div className="pattern-bubbles-primary-light scale-y-flip absolute w-[90%] h-[128%] top-1/2 -translate-y-1/2 mt-[0.1rem] -z-10"></div>
-                        <div className="absolute inset-0 bg-white rounded-2xl -z-10"></div>
-                        {/* <div className="absolute inset-0 bg-white rounded-2xl -z-10"></div>
+                    <div className="mt-12 flex w-full justify-center">
+                        <div className="relative isolate inline-flex justify-center rounded-2xl border border-gray-100 py-3 pl-4 pr-5 min-[491px]:items-center">
+                            <div className="pattern-bubbles-primary-light absolute top-1/2 -z-10 mt-[0.1rem] h-[128%] w-[90%] -translate-y-1/2 scale-y-flip"></div>
+                            <div className="absolute inset-0 -z-10 rounded-2xl bg-white"></div>
+                            {/* <div className="absolute inset-0 bg-white rounded-2xl -z-10"></div>
                         <div className="absolute h-full w-[86%] right-1/2 translate-x-1/2 -bottom-3 bg-primary-100 rounded-2xl -z-20"></div>
                         <div className="absolute h-full w-[93%] right-1/2 translate-x-1/2 -bottom-1.5 bg-primary-50 rounded-2xl -z-20"></div> */}
-                    {/* <div className="mt-11 flex justify-center min-[434px]:items-center"> */}
-                        <div className="relative shrink-0 mt-1 min-[491px]:mt-0">
-                            <MyImage
-                                className="h-11 w-11 rounded-full"
-                                src={image4281}
-                                alt="Derek Lagos"
-                                sizes="88px"
-                            />
-                            <span className="absolute right-0 top-0 block h-2.5 w-2.5 rounded-full bg-[#16a34a] ring-2 ring-gray-50" />
+                            {/* <div className="mt-11 flex justify-center min-[434px]:items-center"> */}
+                            <div className="relative mt-1 shrink-0 min-[491px]:mt-0">
+                                <MyImage
+                                    className="h-11 w-11 rounded-full"
+                                    src={image4281}
+                                    alt="Derek Lagos"
+                                    sizes="88px"
+                                />
+                                <span className="absolute right-0 top-0 block h-2.5 w-2.5 rounded-full bg-[#16a34a] ring-2 ring-gray-50" />
+                            </div>
+                            <p className="ml-4 max-w-[24rem] text-pretty text-sm leading-6 text-[--itemBodyColor]">
+                                Don&apos;t see what you&apos;re looking for?
+                                Call us at{' '}
+                                <br className="hidden min-[434px]:block" />
+                                <MyLink
+                                    href={makeTelephoneHref(location.telephone)}
+                                    className="text-link">
+                                    {location.telephone}
+                                </MyLink>
+                                . We&apos;re here to help with your search.
+                            </p>
                         </div>
-                        <p className="ml-4 max-w-[24rem] text-pretty text-sm leading-6 text-[--itemBodyColor]">
-                            Don&apos;t see what you&apos;re looking for? Call us
-                            at <br className="hidden min-[434px]:block" />
-                            <MyLink
-                                href={makeTelephoneHref(location.telephone)}
-                                className="text-link">
-                                {location.telephone}
-                            </MyLink>
-                            . We&apos;re here to help with your search.
-                        </p>
-                    </div>
                     </div>
                 </SectionContainer>
             </Section>

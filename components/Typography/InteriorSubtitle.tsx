@@ -4,7 +4,11 @@ interface Props {
     children: React.ReactNode
 }
 
-export function InteriorSubtitle({ className, children, tag: Tag = 'h2' }: Props) {
+export function InteriorSubtitle({
+    className,
+    children,
+    tag: Tag = 'h2',
+}: Props) {
     return (
         <Tag
             className={`${className} text-base/7 font-semibold text-[--sectionSubtitleColor]`}>

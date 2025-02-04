@@ -16,5 +16,9 @@ export function SectionSubtitle({
         'text-sm/6 font-semibold text-[--sectionSubtitleColor]'
     )
 
-    return <Tag data-slot="section-subtitle" className={joinedClassName}>{children}</Tag>
+    return (
+        <Tag data-slot="section-subtitle" className={joinedClassName}>
+            {children}
+        </Tag>
+    )
 }

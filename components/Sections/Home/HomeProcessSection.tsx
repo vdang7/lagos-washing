@@ -64,11 +64,10 @@ export function HomeProcessSection() {
                         patternClassName="text-primary-100"
                     />
                     <div className="mx-auto max-w-2xl text-center">
-                        <SectionSubtitle tag="h2" >
-                        <span className="text-gradient-primary ">
-                        How it works</span>
-                                
-                            
+                        <SectionSubtitle tag="h2">
+                            <span className="text-gradient-primary">
+                                How it works
+                            </span>
                         </SectionSubtitle>
                         <SectionTitle className="mt-2" tag="p">
                             Quick and easy

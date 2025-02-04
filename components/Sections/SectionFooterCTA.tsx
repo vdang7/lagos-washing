@@ -42,7 +42,9 @@ export function SectionFooterCTA({
     )
 
     return (
-        <Section className={`${className} bg-secondary-950`} headerTheme="header-secondary-dark">
+        <Section
+            className={`${className} bg-secondary-950`}
+            headerTheme="header-secondary-dark">
             {/* mobile divider - sm+ */}
             <div
                 className={`absolute top-0 hidden h-[40%] w-full ${cardDividerWrapperClassName} ${sectionBackgroundColor} sm:block lg:hidden`}
@@ -69,7 +71,7 @@ export function SectionFooterCTA({
             </div>
             <div className="relative">
                 <div className="mx-auto max-w-container sm:px-6 lg:px-8">
-                    <div className="relative mx-auto flex max-w-2xl flex-col gap-16 bg-primary-400 px-6 pb-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:pt-16 lg:pb-10 lg:pl-0 lg:ring-0 xl:gap-x-20 xl:pr-20">
+                    <div className="relative mx-auto flex max-w-2xl flex-col gap-16 bg-primary-400 px-6 pb-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:pb-10 lg:pl-0 lg:pt-16 lg:ring-0 xl:gap-x-20 xl:pr-20">
                         {/* <div className="absolute -top-[0.54rem] right-0 hidden w-[calc(100%-12rem)] justify-center lg:flex">
                             <div className="h-1.5 w-[93.6%] bg-primary-600 [border-top-left-radius:15.625rem;] [border-top-right-radius:15.625rem;] xl:w-[95%]"></div>
                         </div> */}
@@ -91,18 +93,18 @@ export function SectionFooterCTA({
                                 <div className="absolute inset-0 rounded-bl-3xl bg-primary-400">
                                     <PatternHexagon
                                         // className="h-[38rem] w-[17rem] -translate-x-4"
-                                        className="h-[25rem] w-[15rem] relative z-10"
+                                        className="relative z-10 h-[25rem] w-[15rem]"
                                         patternClassName="text-primary-200"
                                     />
                                     <div className="absolute bottom-0 left-0 h-[1.1rem] w-[1.1rem] bg-primary-950 [clip-path:polygon(44%_69%,105%_105%,10%_100%,0%_8%)]"></div>
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute inset-0 pattern-logo-white [background-size:10rem] opacity-5 lg:hidden"></div>
-                        <div className="hidden lg:block absolute h-full right-0 top-0 rounded-3xl [width:calc(100%-192.2px)]  pointer-events-none">
-                            <div className="absolute inset-0 pattern-logo-white [background-size:10rem] opacity-5"></div>
+                        <div className="pattern-logo-white absolute inset-0 opacity-5 [background-size:10rem] lg:hidden"></div>
+                        <div className="pointer-events-none absolute right-0 top-0 hidden h-full rounded-3xl [width:calc(100%-192.2px)] lg:block">
+                            <div className="pattern-logo-white absolute inset-0 opacity-5 [background-size:10rem]"></div>
                         </div>
-                        <div className="relative isolate h-96 z-10 lg:aspect-[1/1] lg:h-auto lg:max-w-sm">
+                        <div className="relative isolate z-10 h-96 lg:aspect-[1/1] lg:h-auto lg:max-w-sm">
                             {/* <MyImage
                                 alt=""
                                 src={image813}
@@ -112,7 +114,7 @@ export function SectionFooterCTA({
                             100vw"
                             /> */}
                             <div className="relative isolate flex h-[22rem] w-full flex-none flex-col items-center justify-center overflow-hidden rounded-2xl bg-secondary-950 shadow-xl lg:w-[384px] lg:translate-y-2">
-                                <div className="absolute -bottom-px left-1/2 -translate-x-1/2 flex h-[2px] w-32">
+                                <div className="absolute -bottom-px left-1/2 flex h-[2px] w-32 -translate-x-1/2">
                                     <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(14,165,233,0.3)_67.19%,rgba(14,165,233,0)_100%)]"></div>
                                     <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(14,165,233,0.3)_67.19%,rgba(14,165,233,0)_100%)]"></div>
                                     <div className="-ml-[100%] w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(14,165,233,0.3)_67.19%,rgba(14,165,233,0)_100%)]"></div>
@@ -142,7 +144,11 @@ export function SectionFooterCTA({
                                     ))}
                                 </div>
                                 <p className="mt-2 max-w-[15rem] text-balance text-center text-sm font-semibold text-white">
-                                    Neighbors in The Triangle who gave our service a <span className="text-gradient-primary">5-star rating.</span>
+                                    Neighbors in The Triangle who gave our
+                                    service a{' '}
+                                    <span className="text-gradient-primary">
+                                        5-star rating.
+                                    </span>
                                 </p>
                                 <div className="mt-5 flex gap-x-3">
                                     <MyLink href={app.facebookReviewPageHref}>
@@ -155,7 +161,9 @@ export function SectionFooterCTA({
                                             backgroundColor=""
                                         />
                                     </MyLink>
-                                    <MyLink rel={null} href={app.googleReviewPageHref}>
+                                    <MyLink
+                                        rel={null}
+                                        href={app.googleReviewPageHref}>
                                         <MyImage
                                             src={imagegoogle}
                                             className="size-3 hover:brightness-150"

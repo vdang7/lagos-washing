@@ -8,7 +8,7 @@ interface Props {
     autoComplete: string
     placeholder: string
     required: boolean
-    [key: string]: any;
+    [key: string]: any
 }
 
 const FormInput = forwardRef<HTMLInputElement, Props>(

@@ -40,7 +40,7 @@ export function MyLink({
             rel: rel === null ? undefined : 'noopener noreferrer',
         }),
         ...(!(isAction || isExternal) && {
-            prefetch: prefetch
+            prefetch: prefetch,
         }),
     }
 

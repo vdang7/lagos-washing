@@ -50,17 +50,17 @@ const RADIO_INPUT_VALUES = {
     TIKTOK: 'tiktok',
     NEXTDOOR: 'nextdoor',
     OTHER: 'other',
-};
+}
 
 const schema: ZodType<FormData> = z.object({
     fullName: z
-    .string()
-    .min(1, 'Your name must contain at least 1 character')
-    .max(
-        FULL_NAME_MAX_LENGTH,
-        `Please make your name shorter than ${FULL_NAME_MAX_LENGTH} characters`
-    )
-    .trim(),
+        .string()
+        .min(1, 'Your name must contain at least 1 character')
+        .max(
+            FULL_NAME_MAX_LENGTH,
+            `Please make your name shorter than ${FULL_NAME_MAX_LENGTH} characters`
+        )
+        .trim(),
     // firstName: z
     //     .string()
     //     .min(1, 'Your first name must contain at least 1 character')
@@ -93,7 +93,7 @@ const schema: ZodType<FormData> = z.object({
             `Please make your phone number shorter than ${PHONE_NUMBER_MAX_LENGTH} characters`
         )
         .trim(),
-   propertyAddress: z
+    propertyAddress: z
         .string()
         .min(1, 'Your address must contain at least 1 character')
         .max(
@@ -133,7 +133,7 @@ const radioInputClassName = 'appearance-none peer'
 const radioLabelClassName = `${inputClassName} flex items-center hover:ring-primary-400 hover:ring-2 peer-checked:bg-primary-100 peer-checked:ring-primary-100  peer-checked:shadow-none peer-checked:ring-2`
 
 const RequiredInputGraphic = () => (
-    <span className="text-[#ff5996] ml-1">*</span>
+    <span className="ml-1 text-[#ff5996]">*</span>
 )
 
 export function FormFreeEstimate({ className }: Props) {
@@ -141,16 +141,15 @@ export function FormFreeEstimate({ className }: Props) {
 
     const [status, setStatus] = useState('')
     const [error, setError] = useState('')
-    const [selectedValue, setSelectedValue] = useState<string | null>(null);
+    const [selectedValue, setSelectedValue] = useState<string | null>(null)
 
-    const handleRadioChange = (event:any) => {
-        if(event.target.id === RADIO_INPUT_VALUES.OTHER) {
-            setSelectedValue(RADIO_INPUT_VALUES.OTHER);
+    const handleRadioChange = (event: any) => {
+        if (event.target.id === RADIO_INPUT_VALUES.OTHER) {
+            setSelectedValue(RADIO_INPUT_VALUES.OTHER)
+        } else {
+            setSelectedValue(event.target.value)
         }
-        else {
-            setSelectedValue(event.target.value);
-        }
-    };
+    }
 
     const {
         register,
@@ -170,17 +169,18 @@ export function FormFreeEstimate({ className }: Props) {
                 statusState={{ status, setStatus }}
                 errorState={{ error, setError }}>
                 <div className="mb-8">
-                    <p className="text-[1.375rem]/8 font-semibold text-pretty">
+                    <p className="text-pretty text-[1.375rem]/8 font-semibold">
                         Ready for your free estimate?
                     </p>
-                    <p className="mt-1 text-sm/6 text-gray-600 text-balance">
-                        Tell us a few details and we&apos;ll provide you with your free estimate or call us at <MyLink
-                                                                    className="whitespace-nowrap font-semibold text-primary-700 transition-colors hover:text-gray-900"
-                                                                    href={makeTelephoneHref(
-                                                                        location.telephone
-                                                                    )}>
-                                                                    {location.telephone}
-                                                                </MyLink>.
+                    <p className="mt-1 text-balance text-sm/6 text-gray-600">
+                        Tell us a few details and we&apos;ll provide you with
+                        your free estimate or call us at{' '}
+                        <MyLink
+                            className="whitespace-nowrap font-semibold text-primary-700 transition-colors hover:text-gray-900"
+                            href={makeTelephoneHref(location.telephone)}>
+                            {location.telephone}
+                        </MyLink>
+                        .
                     </p>
                 </div>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -189,7 +189,7 @@ export function FormFreeEstimate({ className }: Props) {
                             className={labelClassName}
                             htmlFor="full-name">
                             Full name
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
                         <div className="mt-2.5">
                             <FormInput
@@ -234,7 +234,7 @@ export function FormFreeEstimate({ className }: Props) {
                     <div className="sm:col-span-2">
                         <FormLabel className={labelClassName} htmlFor="email">
                             Email
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
                         <div className="mt-2.5">
                             <FormInput
@@ -258,7 +258,7 @@ export function FormFreeEstimate({ className }: Props) {
                             className={labelClassName}
                             htmlFor="phone-number">
                             Phone number
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
                         <div className="mt-2.5">
                             <FormInput
@@ -282,7 +282,7 @@ export function FormFreeEstimate({ className }: Props) {
                             className={labelClassName}
                             htmlFor="property-address">
                             Property address
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
                         <div className="mt-2.5">
                             <FormInput
@@ -304,7 +304,7 @@ export function FormFreeEstimate({ className }: Props) {
                     <div className="sm:col-span-2">
                         <FormLabel className={labelClassName} htmlFor="message">
                             How can we help?
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
                         <div className="mt-2.5">
                             <textarea
@@ -326,24 +326,30 @@ export function FormFreeEstimate({ className }: Props) {
                     <div className="sm:col-span-2">
                         <FormLabel className={labelClassName} htmlFor="foundAt">
                             Where did you find us?
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
-                        <div className="mt-2.5 gap-x-6 gap-y-4 flex flex-wrap">
+                        <div className="mt-2.5 flex flex-wrap gap-x-6 gap-y-4">
                             <div className="flex items-center">
                                 <input
                                     id={RADIO_INPUT_VALUES.FACEBOOK}
                                     type="radio"
                                     value={RADIO_INPUT_VALUES.FACEBOOK}
                                     className={radioInputClassName}
-                                    checked={selectedValue === RADIO_INPUT_VALUES.FACEBOOK}
+                                    checked={
+                                        selectedValue ===
+                                        RADIO_INPUT_VALUES.FACEBOOK
+                                    }
                                     onClick={handleRadioChange}
                                     {...register('foundAt')}
                                 />
-                                    <label
+                                <label
                                     htmlFor={RADIO_INPUT_VALUES.FACEBOOK}
-                                    className={radioLabelClassName}
-                                >
-                                    <MyImage src={imagefacebook} sizes="32px" alt="" className="size-4 mr-2"></MyImage>
+                                    className={radioLabelClassName}>
+                                    <MyImage
+                                        src={imagefacebook}
+                                        sizes="32px"
+                                        alt=""
+                                        className="mr-2 size-4"></MyImage>
                                     Facebook
                                 </label>
                             </div>
@@ -353,15 +359,21 @@ export function FormFreeEstimate({ className }: Props) {
                                     type="radio"
                                     value={RADIO_INPUT_VALUES.GOOGLE}
                                     className={radioInputClassName}
-                                    checked={selectedValue === RADIO_INPUT_VALUES.GOOGLE}
+                                    checked={
+                                        selectedValue ===
+                                        RADIO_INPUT_VALUES.GOOGLE
+                                    }
                                     onClick={handleRadioChange}
                                     {...register('foundAt')}
                                 />
-                                    <label
+                                <label
                                     htmlFor={RADIO_INPUT_VALUES.GOOGLE}
-                                    className={radioLabelClassName}
-                                >
-                                    <MyImage src={imagegoogle} sizes="32px" alt="" className="size-4 mr-2"></MyImage>
+                                    className={radioLabelClassName}>
+                                    <MyImage
+                                        src={imagegoogle}
+                                        sizes="32px"
+                                        alt=""
+                                        className="mr-2 size-4"></MyImage>
                                     Google
                                 </label>
                             </div>
@@ -371,16 +383,26 @@ export function FormFreeEstimate({ className }: Props) {
                                     type="radio"
                                     value={RADIO_INPUT_VALUES.TIKTOK}
                                     className={radioInputClassName}
-                                    checked={selectedValue === RADIO_INPUT_VALUES.TIKTOK}
+                                    checked={
+                                        selectedValue ===
+                                        RADIO_INPUT_VALUES.TIKTOK
+                                    }
                                     onClick={handleRadioChange}
                                     {...register('foundAt')}
                                 />
-                                    <label
+                                <label
                                     htmlFor={RADIO_INPUT_VALUES.TIKTOK}
-                                    className={radioLabelClassName}
-                                >
-                                    <div className="relative mr-2 bg-gray-900 rounded-full p-1">
-                                        <svg className="size-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+                                    className={radioLabelClassName}>
+                                    <div className="relative mr-2 rounded-full bg-gray-900 p-1">
+                                        <svg
+                                            className="size-2.5"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 448 512">
+                                            <path
+                                                fill="#fff"
+                                                d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
+                                            />
+                                        </svg>
                                     </div>
                                     TikTok
                                 </label>
@@ -391,22 +413,28 @@ export function FormFreeEstimate({ className }: Props) {
                                     type="radio"
                                     value={RADIO_INPUT_VALUES.NEXTDOOR}
                                     className={radioInputClassName}
-                                    checked={selectedValue === RADIO_INPUT_VALUES.NEXTDOOR}
+                                    checked={
+                                        selectedValue ===
+                                        RADIO_INPUT_VALUES.NEXTDOOR
+                                    }
                                     onClick={handleRadioChange}
                                     {...register('foundAt')}
                                 />
-                                    <label
+                                <label
                                     htmlFor={RADIO_INPUT_VALUES.NEXTDOOR}
-                                    className={radioLabelClassName}
-                                >
-                                    <MyImage src={imagenextdoor} sizes="35.2px" alt="" className="size-[1.1rem] mr-2"></MyImage>
+                                    className={radioLabelClassName}>
+                                    <MyImage
+                                        src={imagenextdoor}
+                                        sizes="35.2px"
+                                        alt=""
+                                        className="mr-2 size-[1.1rem]"></MyImage>
                                     Next Door
                                 </label>
                             </div>
                             <div className="flex items-center">
                                 <FormInput
                                     id={RADIO_INPUT_VALUES.OTHER}
-                                    className={`hover:ring-2 appearance-none ${inputClassName} ${selectedValue === RADIO_INPUT_VALUES.OTHER ? 'ring-2 ring-primary-200': ''}`}
+                                    className={`appearance-none hover:ring-2 ${inputClassName} ${selectedValue === RADIO_INPUT_VALUES.OTHER ? 'ring-2 ring-primary-200' : ''}`}
                                     type="text"
                                     autoComplete="found-at-other"
                                     placeholder="Other..."

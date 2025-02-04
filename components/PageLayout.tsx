@@ -43,9 +43,8 @@ export function PageLayout({
                     // />
                 )}
 
-                
                 <ScrollOnce>
-                <BottomCTABar className="lg:hidden" />
+                    <BottomCTABar className="lg:hidden" />
                 </ScrollOnce>
             </main>
         </>

@@ -12,5 +12,9 @@ export function SectionTitle({ tag: Tag = 'h1', className, children }: Props) {
         'text-3xl font-semibold tracking-tight text-[--sectionTitleColor] sm:text-4xl'
     )
 
-    return <Tag data-slot="section-title" className={joinedClassName}>{children}</Tag>
+    return (
+        <Tag data-slot="section-title" className={joinedClassName}>
+            {children}
+        </Tag>
+    )
 }

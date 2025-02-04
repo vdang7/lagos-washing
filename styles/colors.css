@@ -44,7 +44,7 @@
     --stackAvatarsBoxTextBoldColor: theme('colors.primary.400');
 
     --itemReviewsSummaryCardStarColor: theme('colors.primary.400');
-    --itemReviewsSummaryCardTextColor: theme('colors.primary.900');    
+    --itemReviewsSummaryCardTextColor: theme('colors.primary.900');
 }
 
 .bg-gray-50 {

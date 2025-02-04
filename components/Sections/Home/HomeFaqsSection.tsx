@@ -74,9 +74,10 @@ export function HomeFaqsSection() {
                 <SectionContainer>
                     <div className="mx-auto max-w-4xl divide-y divide-gray-100">
                         <div>
-                            <SectionSubtitle tag="p" className="text-sm mb-1">
+                            <SectionSubtitle tag="p" className="mb-1 text-sm">
                                 <span className="text-gradient-primary-dark">
-                                    100% transparency</span>
+                                    100% transparency
+                                </span>
                             </SectionSubtitle>
                             <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
                                 Questions? Answers.
@@ -87,10 +88,10 @@ export function HomeFaqsSection() {
                         </dl>
                     </div>
                     <div className="mx-auto mt-12 max-w-4xl">
-                        <div className="relative w-full rounded-2xl border border-gray-100 p-5 min-[800px]:flex min-[800px]:items-center min-[800px]:justify-between isolate">
-                            <div className="pattern-bubbles-primary-light scale-y-flip absolute w-[90%] h-[122%] min-[800px]:h-[132%] top-1/2 -translate-y-1/2 right-1/2 translate-x-1/2 min-[800px]:mt-[0.1rem] -z-10"></div>
-                            <div className="absolute inset-0 bg-white -z-10 rounded-2xl"></div>
-                        {/* <div className="absolute inset-0 bg-white rounded-2xl -z-10"></div>
+                        <div className="relative isolate w-full rounded-2xl border border-gray-100 p-5 min-[800px]:flex min-[800px]:items-center min-[800px]:justify-between">
+                            <div className="pattern-bubbles-primary-light absolute right-1/2 top-1/2 -z-10 h-[122%] w-[90%] -translate-y-1/2 translate-x-1/2 scale-y-flip min-[800px]:mt-[0.1rem] min-[800px]:h-[132%]"></div>
+                            <div className="absolute inset-0 -z-10 rounded-2xl bg-white"></div>
+                            {/* <div className="absolute inset-0 bg-white rounded-2xl -z-10"></div>
                         <div className="absolute h-full w-[93%] right-1/2 translate-x-1/2 -bottom-3 bg-primary-100 rounded-2xl -z-20"></div>
                         <div className="absolute h-full w-[97%] right-1/2 translate-x-1/2 -bottom-1.5 bg-primary-50 rounded-2xl -z-20"></div> */}
                             <div className="absolute left-0 top-[1rem] scale-[.6]">
@@ -121,8 +122,8 @@ export function HomeFaqsSection() {
                     </div>
                 </SectionContainer>
                 {/* <PatternHexagon className="absolute bottom-1/2 hidden size-40 -translate-x-3/4 translate-y-1/2 lg:block min-[1230px]:-translate-x-1/2" /> */}
-                <PatternHexagon className="absolute bottom-1/2 hidden size-96 lg:block -translate-x-[21rem] min-[1230px]:-translate-x-[19rem]" />
-                <PatternHexagon className="absolute right-0 bottom-1/2 hidden size-40 translate-y-3/4 lg:block translate-x-3/4" />
+                <PatternHexagon className="absolute bottom-1/2 hidden size-96 -translate-x-[21rem] lg:block min-[1230px]:-translate-x-[19rem]" />
+                <PatternHexagon className="absolute bottom-1/2 right-0 hidden size-40 translate-x-3/4 translate-y-3/4 lg:block" />
             </Section>
         </>
     )

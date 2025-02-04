@@ -7,7 +7,10 @@ interface Props {
 }
 
 export function FooterNavigation(props: Props) {
-    const className = clsx(props.className, 'flex flex-wrap gap-x-12 gap-y-3 justify-center')
+    const className = clsx(
+        props.className,
+        'flex flex-wrap gap-x-12 gap-y-3 justify-center'
+    )
 
     return (
         <nav className={className}>

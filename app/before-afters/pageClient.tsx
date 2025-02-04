@@ -51,7 +51,7 @@ export default function PageClient() {
                                 <MyLink
                                     prefetch={false}
                                     href={getPageById(4).href}
-                                    className="group mb-6 inline-flex flex-wrap gap-x-6 gap-y-2 justify-center w-full lg:justify-start">
+                                    className="group mb-6 inline-flex w-full flex-wrap justify-center gap-x-6 gap-y-2 lg:justify-start">
                                     <span className="relative flex items-center rounded-full bg-primary-100 px-3 pb-1 pt-[0.1875rem] text-[0.8125rem] font-semibold">
                                         <GiftIcon
                                             className="mr-2 h-4 w-4 text-primary-400"
@@ -67,11 +67,11 @@ export default function PageClient() {
                                         New customers get 15% off
                                     </TextButton>
                                 </MyLink>
-                                <InteriorTitle className="text-center lg:text-left text-balance max-w-2xl mx-auto">
+                                <InteriorTitle className="mx-auto max-w-2xl text-balance text-center lg:text-left">
                                     See our latest projects in The Triangle
                                 </InteriorTitle>
                             </div>
-                            <div className="flex lg:flex-col scale-[0.85] flex-wrap justify-center gap-4 lg:origin-right">
+                            <div className="flex scale-[0.85] flex-wrap justify-center gap-4 lg:origin-right lg:flex-col">
                                 <ItemReviewsSummaryCard
                                     className="whitespace-nowrap bg-white ring-1 ring-inset ring-gray-900/10"
                                     href={app.googleReviewPageHref}
@@ -110,7 +110,7 @@ export default function PageClient() {
                                 />
                             </div>
                         </div>
-                        <SectionGallery className="mt-16"/>
+                        <SectionGallery className="mt-16" />
                     </SectionContainer>
                 </Section>
             </PageLayout>

@@ -45,9 +45,9 @@ export default function Page() {
                             </SectionTitleBigger>
                             <div className="mt-6 text-base/8 text-[--sectionBodyColor] sm:text-lg/8">
                                 <p>
-                                    We will reach out to you as soon as
-                                    possible to provide your free estimate. If you have any questions, please
-                                    call us at{' '}
+                                    We will reach out to you as soon as possible
+                                    to provide your free estimate. If you have
+                                    any questions, please call us at{' '}
                                     <MyLink
                                         className="whitespace-nowrap font-semibold text-primary-600 transition-colors hover:text-gray-900"
                                         href={makeTelephoneHref(

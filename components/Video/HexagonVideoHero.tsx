@@ -37,7 +37,6 @@ export function HexagonVideoHero(props: Props) {
     const [isVideoPaused, setIsVideoPaused] = useState(false)
     const [didUserPauseVideo, setDidUserPauseVideo] = useState(false)
 
-    
     const playVideo = () => {
         if (videoRef.current && isVideoPlaying(videoRef.current) === false) {
             videoRef.current.play().catch(() => {})

@@ -76,7 +76,7 @@ function Card({ className }: { className: string }) {
         <>
             <div
                 className={`${className} relative isolate mt-10 flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-secondary-900 bg-secondary-500/10 pb-8 pt-10 min-[698px]:rounded-lg lg:rounded-2xl`}>
-                <div className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 flex h-[2px] w-32">
+                <div className="absolute -bottom-0.5 left-1/2 flex h-[2px] w-32 -translate-x-1/2">
                     <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(14,165,233,0.3)_67.19%,rgba(14,165,233,0)_100%)]"></div>
                     <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(14,165,233,0.3)_67.19%,rgba(14,165,233,0)_100%)]"></div>
                     <div className="-ml-[100%] w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(14,165,233,0.3)_67.19%,rgba(14,165,233,0)_100%)]"></div>
@@ -119,8 +119,11 @@ function Card({ className }: { className: string }) {
                         />
                     ))}
                 </div>
-                <p className="mt-2 text-balance text-center text-sm font-semibold text-white max-w-96">
-                    Neighbors in The Triangle who gave our service a <span className="text-gradient-primary">5-star rating.</span>
+                <p className="mt-2 max-w-96 text-balance text-center text-sm font-semibold text-white">
+                    Neighbors in The Triangle who gave our service a{' '}
+                    <span className="text-gradient-primary">
+                        5-star rating.
+                    </span>
                 </p>
             </div>
         </>
@@ -136,11 +139,11 @@ export default function Page() {
                     className="pt-section bg-secondary-950">
                     <HeaderOffset />
                     <div
-                        className="absolute inset-0 size-full bg-cover bg-fixed [background-position:10%_0%] min-[420px]:bg-left-top hero-background-image opacity-30 min-[1006px]:opacity-100"
+                        className="hero-background-image absolute inset-0 size-full bg-cover bg-fixed opacity-30 [background-position:10%_0%] min-[420px]:bg-left-top min-[1006px]:opacity-100"
                         // style={{
                         //     backgroundImage: `url(${imageHero.src})`,
                         // }}
-                        ></div>
+                    ></div>
                     <div className="absolute bottom-0 right-0 hidden border-b-[70px] border-r-[70px] border-b-secondary-950 border-r-transparent lg:block"></div>
                     {/* <div className="absolute top-0 hidden h-28 w-full bg-gradient-to-b from-secondary-950 lg:block"></div> */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-secondary-950 from-0% via-secondary-950 via-60% lg:via-40%"></div>
@@ -148,8 +151,7 @@ export default function Page() {
                         <SectionColumnsTwo align="items-end">
                             <div className="px-6 sm:px-0 lg:pr-4 lg:pt-4">
                                 <div className="lg:max-w-lg">
-                                    <div
-                                        className="mb-6 inline-flex space-x-6">
+                                    <div className="mb-6 inline-flex space-x-6">
                                         <span className="relative flex items-center rounded-full bg-secondary-500/10 px-3 pb-1 pt-[0.1875rem] text-[0.8125rem] font-semibold">
                                             <GiftIcon
                                                 className="mr-2 h-4 w-4 text-primary-400"
@@ -173,8 +175,7 @@ export default function Page() {
                                                 </div>
                                             </div>
                                         </span>
-                                        <p
-                                            className="font-medium text-primary-300 inline-flex items-center text-sm/6">
+                                        <p className="inline-flex items-center text-sm/6 font-medium text-primary-300">
                                             Get 5% off all services{' '}
                                             <span className="hidden [margin-left:0.22rem] min-[400px]:block">
                                                 {' '}

@@ -15,17 +15,14 @@ import image3 from '@/public/images/minified/pages/about/3.webp'
 import image4 from '@/public/images/minified/pages/about/4.webp'
 
 const outerContainerClassName = 'px-6 lg:px-0 relative'
-const sectionContainerClassName =
-    'mx-auto max-w-2xl lg:max-w-container lg:px-8'
+const sectionContainerClassName = 'mx-auto max-w-2xl lg:max-w-container lg:px-8'
 
 export function AboutMissionSection() {
     return (
         <>
             <Section className="pt-section bg-white">
                 <HeaderOffset />
-                <div
-                    className="hero-background-image absolute inset-0 size-full bg-cover bg-fixed opacity-30 [background-position:25%_0%] min-[559px]:bg-left-top sm:opacity-100"
-                    ></div>
+                <div className="hero-background-image absolute inset-0 size-full bg-cover bg-fixed opacity-30 [background-position:25%_0%] min-[559px]:bg-left-top sm:opacity-100"></div>
                 <div className="absolute inset-0 bg-gradient-to-tr from-white from-0% via-white via-60% lg:via-65%"></div>
                 <div className={outerContainerClassName}>
                     <SectionContainer className={sectionContainerClassName}>
@@ -36,9 +33,9 @@ export function AboutMissionSection() {
                                 sizes="48px"
                                 alt=""
                                 placeholder="empty"></MyImage>
-                                <InteriorSubtitle>
-                                    {app.companyName}
-                                </InteriorSubtitle>
+                            <InteriorSubtitle>
+                                {app.companyName}
+                            </InteriorSubtitle>
                             {/* <h2 className="text-sm font-medium text-primary-900">
                                 Lagos Pressure Washing
                             </h2> */}
@@ -60,9 +57,13 @@ export function AboutMissionSection() {
                                 <p className="mt-6 text-base/7 text-gray-600">
                                     {/* At Lagos Washing, we believe your surroundings impact your actions. That’s why we’re all about making spaces that bring joy and comfort. We believe the right atmosphere can spark creativity, foster connections, and keep the good energy going. We want everyone to feel comfortable and relaxed, so they can thrive and be their best selves. */}
                                     At {app.companyName}, we believe great
-                                    spaces inspire great things. That&apos;s why we create environments designed for comfort. Imagine a space where creativity flows effortlessly. Where connections happen naturally. 
-                                    Where you&apos;re supported on your journey to achieving your full potential. That&apos;s the space we create.
-                                    
+                                    spaces inspire great things. That&apos;s why
+                                    we create environments designed for comfort.
+                                    Imagine a space where creativity flows
+                                    effortlessly. Where connections happen
+                                    naturally. Where you&apos;re supported on
+                                    your journey to achieving your full
+                                    potential. That&apos;s the space we create.
                                     {/* We
                                     believe a positive atmosphere sparks
                                     creativity, fosters connections, and keeps

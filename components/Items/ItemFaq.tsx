@@ -57,21 +57,21 @@ export function ItemFaq(props: InterfaceItemFaq) {
                         leaveTo="opacity-0 -translate-y-1 max-h-0">
                         <DisclosurePanel className="mt-2 pr-12">
                             <div className="text-sm/6 text-gray-600">
-                                <div className="relative inline-flex items-center mt-4 mb-3">
+                                <div className="relative mb-3 mt-4 inline-flex items-center">
                                     <span className="relative inline-block">
                                         <MyImage
-                                        src={imageHeadshot}
-                                        sizes="72px"
-                                        alt={app.founderFullName}
-                                        className="size-9 rounded-full"
+                                            src={imageHeadshot}
+                                            sizes="72px"
+                                            alt={app.founderFullName}
+                                            className="size-9 rounded-full"
                                         />
                                         <span className="absolute right-0 top-0 block size-2 rounded-full bg-[#16a34a] ring-2 ring-gray-50" />
                                     </span>
                                     <div className="ml-3">
-                                        <p className="text-[0.7875rem]/none  font-medium text-primary-700">
+                                        <p className="text-[0.7875rem]/none font-medium text-primary-700">
                                             {app.founderFullName}
                                         </p>
-                                        <p className="text-[0.675rem]/none text-gray-900 mt-1.5">
+                                        <p className="mt-1.5 text-[0.675rem]/none text-gray-900">
                                             Founder, {app.companyName}
                                         </p>
                                     </div>

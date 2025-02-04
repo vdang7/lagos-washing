@@ -43,7 +43,6 @@ export function HexagonVideo(props: Props) {
 
     // const [isModalOpen, setIsModalOpen] = useState(false)
 
-
     const playPreviewVideo = () => {
         if (
             videoRef.current &&

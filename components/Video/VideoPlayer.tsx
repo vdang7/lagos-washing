@@ -42,8 +42,6 @@ export function VideoPlayer(props: Props) {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
 
-  
-
     const playPreviewVideo = () => {
         if (
             previewVideoRef.current &&

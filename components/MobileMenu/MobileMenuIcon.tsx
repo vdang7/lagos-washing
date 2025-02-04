@@ -12,7 +12,6 @@ export function MobileMenuIcon(props: Props) {
         props.className
     )
 
-
     return (
         <button type="button" className={className} onClick={props.onClick}>
             <span className="sr-only">Open main menu</span>

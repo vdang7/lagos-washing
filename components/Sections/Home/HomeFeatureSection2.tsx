@@ -22,7 +22,7 @@ export function HomeFeatureSection2() {
                                     100vw"
                             />
 
-                            <span className="absolute bottom-0 mb-3 ml-3 rounded-full bg-white px-3  text-gray-900 font-medium text-sm py-0.5">
+                            <span className="absolute bottom-0 mb-3 ml-3 rounded-full bg-white px-3 py-0.5 text-sm font-medium text-gray-900">
                                 Before
                             </span>
                         </div>
@@ -35,7 +35,7 @@ export function HomeFeatureSection2() {
                                     (min-width: 640px) 50vw,
                                     100vw"
                             />
-                            <span className="absolute bottom-0 mb-3 ml-3 rounded-full bg-[#6be036] px-3  text-gray-900 font-medium sm:right-0 sm:mr-3 text-sm py-0.5">
+                            <span className="absolute bottom-0 mb-3 ml-3 rounded-full bg-[#6be036] px-3 py-0.5 text-sm font-medium text-gray-900 sm:right-0 sm:mr-3">
                                 After
                             </span>
                         </div>

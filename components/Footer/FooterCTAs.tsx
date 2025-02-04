@@ -69,7 +69,8 @@ export function FooterCTAs(props: Props) {
                         <span className="flex-shrink-0 text-xs font-medium text-primary-300">
                             Call or text us
                         </span>
-                        <ContactButton href={makeTelephoneHref(location.telephone)}>
+                        <ContactButton
+                            href={makeTelephoneHref(location.telephone)}>
                             {location.telephone}
                         </ContactButton>
                     </h3>

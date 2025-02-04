@@ -24,10 +24,8 @@ export function ItemReviewsSummaryCard({
         <MyLink
             href={href}
             rel={null}
-            className={`${className} hover:-translate-y-1 hover:translate-x-1 transition-transform relative flex rounded-full py-3 pl-3 pr-5 text-xs text-[--itemReviewsSummaryCardTextColor]`}>
-            <div className="flex items-center">
-                {logo}
-            </div>
+            className={`${className} relative flex rounded-full py-3 pl-3 pr-5 text-xs text-[--itemReviewsSummaryCardTextColor] transition-transform hover:-translate-y-1 hover:translate-x-1`}>
+            <div className="flex items-center">{logo}</div>
             <div className="ml-4">
                 <div className="flex items-center gap-x-2">
                     {rating}

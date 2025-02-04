@@ -16,7 +16,10 @@ export function TextButtonBig(props: Props) {
     )
 
     return (
-        <MyLink href={props.href} prefetch={props.prefetch} className={className}>
+        <MyLink
+            href={props.href}
+            prefetch={props.prefetch}
+            className={className}>
             {props.children}
             <IconChevronAnimated
                 className="-mr-1 ml-2.5"

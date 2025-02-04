@@ -15,7 +15,9 @@ export function HeaderTelephone(props: Props) {
     )
 
     return (
-        <MyLink href={makeTelephoneHref(location.telephone)} className={className}>
+        <MyLink
+            href={makeTelephoneHref(location.telephone)}
+            className={className}>
             <PhoneIcon
                 className="mr-2.5 h-5 w-5 flex-none text-[--headerPhoneIconColor] transition-colors group-hover:text-[--headerPhoneIconHoverColor]"
                 aria-hidden="true"

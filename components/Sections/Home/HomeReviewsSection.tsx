@@ -24,20 +24,25 @@ export function HomeReviewsSection({ className }: Props) {
                         <div>
                             <SectionSubtitle tag="h2">
                                 <span className="text-gradient-primary-dark">
-                                    Google & Facebook reviews</span>
+                                    Google & Facebook reviews
+                                </span>
                             </SectionSubtitle>
-                            <SectionTitle tag="h2" className="mt-2 text-balance">
+                            <SectionTitle
+                                tag="h2"
+                                className="mt-2 text-balance">
                                 What homeowners & businesses in{' '}
                                 {app.serviceAreasNickname} are saying…
                             </SectionTitle>
                         </div>
                         <PatternHexagon
-                            className="absolute right-0 top-0 size-[30rem] -translate-y-32 translate-x-[75%] min-[506px]:-translate-y-40 lg:-translate-y-32 -z-10"
+                            className="absolute right-0 top-0 -z-10 size-[30rem] -translate-y-32 translate-x-[75%] min-[506px]:-translate-y-40 lg:-translate-y-32"
                             patternClassName="text-primary-100 lg:text-primary-400"
                         />
-                        <div data-slot="stack-reviews-spotlight" className="mt-16 flex shrink-0 flex-wrap gap-x-6 gap-y-4 sm:mt-10 lg:mt-0">
+                        <div
+                            data-slot="stack-reviews-spotlight"
+                            className="mt-16 flex shrink-0 flex-wrap gap-x-6 gap-y-4 sm:mt-10 lg:mt-0">
                             <ItemReviewsSummaryCard
-                                className="flex-grow bg-white border border-gray-100 sm:flex-none"
+                                className="flex-grow border border-gray-100 bg-white sm:flex-none"
                                 href={app.googleReviewPageHref}
                                 rating="5.0"
                                 numberOfStars={5}
@@ -53,7 +58,7 @@ export function HomeReviewsSection({ className }: Props) {
                                 hideGradient
                             />
                             <ItemReviewsSummaryCard
-                                className="flex-grow bg-white border border-gray-100 sm:flex-none"
+                                className="flex-grow border border-gray-100 bg-white sm:flex-none"
                                 href={app.facebookReviewPageHref}
                                 rating="5.0"
                                 numberOfStars={5}

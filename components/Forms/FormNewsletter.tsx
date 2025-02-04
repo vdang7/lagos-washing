@@ -37,8 +37,6 @@ export function FormNewsletter({ className }: Props) {
     const [status, setStatus] = useState('')
     const [error, setError] = useState('')
 
-
-
     const {
         register,
         handleSubmit,
@@ -103,7 +101,8 @@ export function FormNewsletter({ className }: Props) {
                 {status === 'ok' && (
                     <>
                         <p className="mt-6 text-balance text-sm/6 font-medium text-primary-300">
-                            Thank you for subscribing to our email updates. Stay tuned for updates.
+                            Thank you for subscribing to our email updates. Stay
+                            tuned for updates.
                         </p>
                     </>
                 )}

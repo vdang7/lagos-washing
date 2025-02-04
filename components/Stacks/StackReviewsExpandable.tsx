@@ -117,7 +117,9 @@ export function StackReviewsExpandable({ className }: Props) {
     }, [])
 
     return (
-        <div ref={reviewsContainerRef} className={`${className} ${isExpanded ? 'pb-section' : ''}`}>
+        <div
+            ref={reviewsContainerRef}
+            className={`${className} ${isExpanded ? 'pb-section' : ''}`}>
             <div className="relative">
                 <PatternHexagon className="absolute left-0 top-0 size-40 -translate-x-1/2 -translate-y-1/2" />
             </div>
@@ -156,7 +158,7 @@ export function StackReviewsExpandable({ className }: Props) {
             </div>
             {showMoreButton && (
                 <>
-                    <div className="absolute bottom-0 left-0 h-72 sm:h-96 w-full bg-gradient-to-t from-gray-50 via-gray-50"></div>
+                    <div className="absolute bottom-0 left-0 h-72 w-full bg-gradient-to-t from-gray-50 via-gray-50 sm:h-96"></div>
 
                     <div className="absolute bottom-48 left-0 flex w-full justify-center">
                         <Button onClick={toggleExpand}>Show more…</Button>
@@ -165,7 +167,7 @@ export function StackReviewsExpandable({ className }: Props) {
             )}
             <div
                 ref={showLessContainerRef}
-                className={`${!showMoreButton && showLessButton ? 'opacity-100' : 'pointer-events-none opacity-0'} z-10 sticky inset-x-0 bottom-12 mt-[-12.5rem] flex justify-center bg-gradient-to-t from-gray-50 pb-8 pt-32 transition-opacity duration-300 lg:bottom-0`}>
+                className={`${!showMoreButton && showLessButton ? 'opacity-100' : 'pointer-events-none opacity-0'} sticky inset-x-0 bottom-12 z-10 mt-[-12.5rem] flex justify-center bg-gradient-to-t from-gray-50 pb-8 pt-32 transition-opacity duration-300 lg:bottom-0`}>
                 <Button
                     className={`${!showMoreButton && showLessButton ? 'translate-y-0' : 'translate-y-4'}`}
                     onClick={toggleExpand}>

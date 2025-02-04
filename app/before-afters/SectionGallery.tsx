@@ -359,7 +359,6 @@ export function SectionGallery({ className }: Props) {
     const [selectedIndex, setSelectedIndex] = useState(0)
 
     useEffect(() => {
-
         preloadImages(images)
     }, [])
 
@@ -390,7 +389,9 @@ export function SectionGallery({ className }: Props) {
 
     const memoizedImages = useMemo(() => {
         return images.map((item, index) => (
-            <div key={item.id} className={`relative ${index === 8 ? 'sm:hidden lg:block' : ''}`}>
+            <div
+                key={item.id}
+                className={`relative ${index === 8 ? 'sm:hidden lg:block' : ''}`}>
                 <MyImage
                     src={item.imageSrc}
                     alt={item.imageAlt}
@@ -398,7 +399,7 @@ export function SectionGallery({ className }: Props) {
                     className="cursor-zoom-in rounded-2xl transition-[filter] will-change-auto hover:brightness-[1.2]"
                     onClick={() => openModal(item.id)}
                 />
-                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-gray-900/10 ring-inset"></div>
+                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
             </div>
         ))
     }, [images])
@@ -407,12 +408,13 @@ export function SectionGallery({ className }: Props) {
         <>
             {/* <Section className="mt-20 pb-section">
                 <SectionContainer className="2xl:max-w-screen-2xl"> */}
-                    {/* <p className="text-center text-xs">
+            {/* <p className="text-center text-xs">
                         All photos were taken in North Carolina
                     </p> */}
-                    <div className={`${className} w-full gap-x-4 space-y-4 sm:columns-2 lg:columns-3`}>
-                        {memoizedImages}
-                    </div>
+            <div
+                className={`${className} w-full gap-x-4 space-y-4 sm:columns-2 lg:columns-3`}>
+                {memoizedImages}
+            </div>
             {/* </SectionContainer>
             </Section> */}
             <Modal

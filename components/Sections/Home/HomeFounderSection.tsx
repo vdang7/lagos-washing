@@ -57,7 +57,8 @@ export function HomeFounderSection() {
                             </div>
 
                             <SectionTitle className="mt-4">
-                                Hi, I am {app.founderFullName}<span className="text-primary-400">.</span>
+                                Hi, I am {app.founderFullName}
+                                <span className="text-primary-400">.</span>
                             </SectionTitle>
                             <p className="mt-6 text-balance text-xl leading-8 text-[--sectionBodyColor]">
                                 {/* I found a passion for pressure washing while
@@ -76,7 +77,9 @@ export function HomeFounderSection() {
                                 come.
                                 {/* At {app.companyName}, I prioritize excellence & customer satisfaction in every project. I am honored to have earned 21 five-star reviews from my amazing clients. I treat each one of my client's property as if it were my own, because your satisfaction is my top priority. */}
                             </SectionBodySmall>
-                            <TextButton className="mt-6" href={getPageById(4).href}>
+                            <TextButton
+                                className="mt-6"
+                                href={getPageById(4).href}>
                                 Get your free estimate
                             </TextButton>
                             <p
@@ -185,9 +188,9 @@ export function HomeFounderSection() {
                                         thumbnailAlt= "enter img alt"
                                         thumbnailSizes="768px"
                                     /> */}
-                                    <div className="flex w-[24rem] flex-col items-center justify-center overflow-hidden rounded-2xl bg-white border border-gray-100 pb-5 pt-8">
+                                    <div className="flex w-[24rem] flex-col items-center justify-center overflow-hidden rounded-2xl border border-gray-100 bg-white pb-5 pt-8">
                                         <StackAvatars />
-                                         <div className="mt-6 flex gap-x-0.5">
+                                        <div className="mt-6 flex gap-x-0.5">
                                             {[1, 2, 3, 4, 5].map((index) => (
                                                 <IconStar
                                                     key={index}
@@ -196,11 +199,14 @@ export function HomeFounderSection() {
                                             ))}
                                         </div>
                                         <p className="mt-2 max-w-[15rem] text-center text-sm font-semibold text-gray-900">
-                                            Neighbors in The Triangle who gave our
-                                            services a 5-star rating.
+                                            Neighbors in The Triangle who gave
+                                            our services a 5-star rating.
                                         </p>
                                         <div className="mt-4 flex gap-x-3">
-                                            <MyLink href={app.facebookReviewPageHref}>
+                                            <MyLink
+                                                href={
+                                                    app.facebookReviewPageHref
+                                                }>
                                                 <MyImage
                                                     src={imagefb}
                                                     className="size-3 hover:brightness-150"
@@ -210,7 +216,9 @@ export function HomeFounderSection() {
                                                     backgroundColor=""
                                                 />
                                             </MyLink>
-                                            <MyLink rel={null} href={app.googleReviewPageHref}>
+                                            <MyLink
+                                                rel={null}
+                                                href={app.googleReviewPageHref}>
                                                 <MyImage
                                                     src={imagegoogle}
                                                     className="size-3 hover:brightness-150"

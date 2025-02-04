@@ -40,12 +40,10 @@ export function ItemHexagonImage({
                     ${index === 0 || index === 3 ? 'sm:text-primary-200 lg:text-gray-200' : ''} 
                     ${index !== undefined && index % 2 === 0 ? 'text-primary-200 sm:text-gray-200 lg:text-primary-200' : ''}
                   `}
-                  
                 pathFourClassName={`
                 ${index === 0 || index === 3 ? 'sm:text-primary-400 lg:text-gray-200' : ''} 
                 ${index !== undefined && index % 2 === 0 ? 'text-primary-400 sm:text-gray-200 lg:text-primary-400' : ''}
                 `}
-                  
             />
             <div className="relative mb-6 w-full">
                 <HexagonImage

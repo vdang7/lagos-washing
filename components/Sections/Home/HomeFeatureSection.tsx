@@ -33,9 +33,13 @@ export function HomeFeatureSection() {
                             sizes="100vw"
                         />
                         {/* <span className="absolute top-1/2 -translate-y-[50%] text-[10vw] min-[400px]:text-[13vw] lg:text-[10rem] font-black text-white/50 left-1/2 -translate-x-[50%]">Serve</span> */}
-                        <div className="absolute bottom-0 flex w-full justify-between px-2 pb-2 font-semibold text-white sm:px-3 sm:pb-3 lg:pb-3.5 lg:px-3.5 text-xs lg:text-sm">
-                            <span className="bg-white/20 px-3 py-0.5 rounded-full">Before</span>
-                            <span className="bg-white text-primary-700 px-3 py-0.5 rounded-full">After</span>
+                        <div className="absolute bottom-0 flex w-full justify-between px-2 pb-2 text-xs font-semibold text-white sm:px-3 sm:pb-3 lg:px-3.5 lg:pb-3.5 lg:text-sm">
+                            <span className="rounded-full bg-white/20 px-3 py-0.5">
+                                Before
+                            </span>
+                            <span className="rounded-full bg-white px-3 py-0.5 text-primary-700">
+                                After
+                            </span>
                         </div>
                         {/* <div className="absolute inset-0 flex justify-center">
                             <LogoLagos 

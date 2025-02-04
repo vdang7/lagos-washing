@@ -58,7 +58,6 @@ export function Header() {
               imageLogoSize: 'h-8 scale-[1.1]',
           }
 
-
     function handleWindowResize() {
         if (window.innerHeight !== pageHeight) {
             setPageHeight(window.innerHeight)

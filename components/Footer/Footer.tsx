@@ -11,14 +11,14 @@ export function Footer() {
         <footer
             data-type="section"
             data-header-theme="header-secondary-dark"
-            className="relative bg-secondary-950 pt-20 pb-8 sm:pt-24 lg:pt-28 min-[1147px]:pt-32 isolate overflow-clip"
+            className="relative isolate overflow-clip bg-secondary-950 pb-8 pt-20 sm:pt-24 lg:pt-28 min-[1147px]:pt-32"
             aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
             {/* <div className="absolute inset-0 [background-size:10rem] pattern-logo-secondary-dark"></div> */}
             <div
-                className="absolute left-[calc(50%-4rem)] top-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)] translate-y-32"
+                className="absolute left-[calc(50%-4rem)] top-10 translate-y-32 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
                 aria-hidden="true">
                 <div
                     className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-secondary-500 to-secondary-700 opacity-20"
@@ -33,8 +33,7 @@ export function Footer() {
             {/* <GradientSecondaryDark/> */}
             <div className="absolute top-0 h-40 w-full bg-gradient-to-b from-secondary-950"></div>
             <SectionContainer className="relative">
-
-            {/* <MyImage
+                {/* <MyImage
                     src={imageLogo}
                     className="absolute left-1/2 right-1/2 -top-12 w-52 h-auto -translate-x-1/2 opacity-[0.07] lg:w-80 lg:left-0 lg:-top-24"
                     alt=""
@@ -46,21 +45,31 @@ export function Footer() {
                 /> */}
                 <FooterCTAs className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none" />
                 <FooterNavigation className="mt-16" />
-                <div className="mt-10 flex flex-wrap text-sm/6 text-primary-500 text-center items-center justify-center gap-y-2 gap-x-2">
-                    <p className="text-center text-balance relative">
-                        &copy; {new Date().getFullYear()} {app.companyLegalName}. (Lagos Washing)
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-center text-sm/6 text-primary-500">
+                    <p className="relative text-balance text-center">
+                        &copy; {new Date().getFullYear()} {app.companyLegalName}
+                        . (Lagos Washing)
                     </p>
                     <span className="inline-block text-white">·</span>
                     <p>All rights reserved.</p>
                     <span className="inline-block text-white">·</span>
                     <p className="flex items-center">
                         Made by
-                        <MyLink href="https://howdywrld.com" className="ml-2 inline-flex opacity-70 hover:opacity-100 transition-opacity text-white font-extrabold" rel={null}>
-                            <svg className="w-5 h-auto mr-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 -0 448 257">
-                                <path  fill="#38bdf8" d="M223.1 132.6c53.24 0 91.02-8.625 117.1-18.5C330 64.5 309.5 0 276.6 0c-10.37 0-19.62 4.5-27.37 10.5C241.8 16.28 232.9 19.13 224 19.29C215.1 19.13 206.2 16.28 198.8 10.5C191 4.5 181.8 0 171.4 0C138.6 0 118 64.5 106.9 114.1C133 124 170.7 132.6 223.1 132.6zM224 256c106.7 0 196.3-67.43 223.1-138.9c2.75-7.625-.938-15.94-8.686-19.44c-7.623-3.5-16.81-1.312-21.93 5.312c-.875 1.25-45.63 61.63-192.5 61.63S32.39 104.3 31.52 103C26.39 96.38 17.27 94.13 9.647 97.63c-7.75 3.5-11.5 11.88-8.749 19.5C27.66 188.6 117.3 256 224 256z" />
+                        <MyLink
+                            href="https://howdywrld.com"
+                            className="ml-2 inline-flex font-extrabold text-white opacity-70 transition-opacity hover:opacity-100"
+                            rel={null}>
+                            <svg
+                                className="mr-1.5 h-auto w-5"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -0 448 257">
+                                <path
+                                    fill="#38bdf8"
+                                    d="M223.1 132.6c53.24 0 91.02-8.625 117.1-18.5C330 64.5 309.5 0 276.6 0c-10.37 0-19.62 4.5-27.37 10.5C241.8 16.28 232.9 19.13 224 19.29C215.1 19.13 206.2 16.28 198.8 10.5C191 4.5 181.8 0 171.4 0C138.6 0 118 64.5 106.9 114.1C133 124 170.7 132.6 223.1 132.6zM224 256c106.7 0 196.3-67.43 223.1-138.9c2.75-7.625-.938-15.94-8.686-19.44c-7.623-3.5-16.81-1.312-21.93 5.312c-.875 1.25-45.63 61.63-192.5 61.63S32.39 104.3 31.52 103C26.39 96.38 17.27 94.13 9.647 97.63c-7.75 3.5-11.5 11.88-8.749 19.5C27.66 188.6 117.3 256 224 256z"
+                                />
                             </svg>
                             <span className="text-base">howdywrld</span>
-                        </MyLink>    
+                        </MyLink>
                     </p>
                 </div>
                 {/* <div className="mt-16 flex flex-col justify-between gap-y-1 text-primary-500 min-[402px]:items-center sm:mt-20 lg:mt-24 lg:flex-row">
@@ -91,7 +100,13 @@ export function Footer() {
                 />
             </div> */}
 
-            <MyImage src={imageLogoSecondaryDark} className="absolute left-0 bottom-1/2 -translate-x-1/2 -z-10 translate-y-1/2 w-[40rem] h-auto" alt="Lagos Pressure Washing logo"  placeholder='empty' backgroundColor='' sizes="1280px"></MyImage>
+            <MyImage
+                src={imageLogoSecondaryDark}
+                className="absolute bottom-1/2 left-0 -z-10 h-auto w-[40rem] -translate-x-1/2 translate-y-1/2"
+                alt="Lagos Pressure Washing logo"
+                placeholder="empty"
+                backgroundColor=""
+                sizes="1280px"></MyImage>
         </footer>
     )
 }

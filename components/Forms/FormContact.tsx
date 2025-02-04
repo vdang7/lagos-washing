@@ -37,13 +37,13 @@ const labelClassName = 'block text-sm/6 font-semibold text-gray-900'
 
 const schema: ZodType<FormData> = z.object({
     fullName: z
-    .string()
-    .min(1, 'Your name must contain at least 1 character')
-    .max(
-        FULL_NAME_MAX_LENGTH,
-        `Please make your name shorter than ${FULL_NAME_MAX_LENGTH} characters`
-    )
-    .trim(),
+        .string()
+        .min(1, 'Your name must contain at least 1 character')
+        .max(
+            FULL_NAME_MAX_LENGTH,
+            `Please make your name shorter than ${FULL_NAME_MAX_LENGTH} characters`
+        )
+        .trim(),
     // firstName: z
     //     .string()
     //     .min(1, 'Your first name must contain at least 1 character')
@@ -87,7 +87,7 @@ const schema: ZodType<FormData> = z.object({
 })
 
 const RequiredInputGraphic = () => (
-    <span className="text-[#ff5996] ml-1">*</span>
+    <span className="ml-1 text-[#ff5996]">*</span>
 )
 
 export function FormContact({ className }: Props) {
@@ -95,7 +95,6 @@ export function FormContact({ className }: Props) {
 
     const [status, setStatus] = useState('')
     const [error, setError] = useState('')
-
 
     const {
         register,
@@ -123,12 +122,12 @@ export function FormContact({ className }: Props) {
                     </p>
                 </div>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                <div className="sm:col-span-2">
+                    <div className="sm:col-span-2">
                         <FormLabel
                             className={labelClassName}
                             htmlFor="full-name">
                             Full name
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
                         <div className="mt-2.5">
                             <FormInput
@@ -196,7 +195,7 @@ export function FormContact({ className }: Props) {
                     <div className="sm:col-span-2">
                         <FormLabel className={labelClassName} htmlFor="email">
                             Email
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
                         <div className="mt-2.5">
                             <FormInput
@@ -220,7 +219,7 @@ export function FormContact({ className }: Props) {
                             className={labelClassName}
                             htmlFor="phone-number">
                             Phone number
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
                         <div className="mt-2.5">
                             <FormInput
@@ -242,7 +241,7 @@ export function FormContact({ className }: Props) {
                     <div className="sm:col-span-2">
                         <FormLabel className={labelClassName} htmlFor="message">
                             Message
-                            <RequiredInputGraphic/>
+                            <RequiredInputGraphic />
                         </FormLabel>
                         <div className="mt-2.5">
                             <textarea
