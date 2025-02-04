@@ -1,0 +1,28 @@
+[data-theme='header-secondary-dark'],
+[data-theme='header-transparent-secondary-dark'] {
+    --mobileMenuIconBoxColor: theme(colors.white / 5%);
+    --mobileMenuIconBoxHoverColor: theme(colors.white / 10%);
+    --mobileMenuBarColor: theme('colors.white');
+
+    --headerNavItemTextColor: theme('colors.white');
+    --headerNavItemTextHoverColor: theme('colors.primary.400');
+    --headerNavItemCurrentPageTextColor: theme('colors.primary.300');
+
+    --headerDropdownIconColor: theme('colors.primary.300');
+    --headerDropdownIconHoverColor: theme('colors.primary.300');
+
+    --headerPhoneIconColor: theme('colors.primary.400');
+    --headerPhoneIconHoverColor: theme('colors.primary.400');
+}
+
+[data-theme='header-secondary-dark'] {
+    --headerBackgroundColor: theme(colors.secondary.950 / 90%);
+    --headerBackgroundColorTransparent: theme(colors.secondary.950 / 75%);
+    --headerBorderColor: theme(colors.secondary.900 / 40%);
+}
+
+[data-theme='header-transparent-secondary-dark'] {
+    --headerBackgroundColor: theme('colors.transparent');
+    --headerBackgroundColorTransparent: theme('colors.transparent');
+    --headerBorderColor: theme('colors.transparent');
+}

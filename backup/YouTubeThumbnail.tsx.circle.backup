@@ -1,0 +1,54 @@
+'use client'
+
+import { ModalWithYouTubeVideo } from '@/components/ModalWithYouTubeVideo'
+import { MyImage } from '@/components/MyImage'
+import { PlayIcon } from '@heroicons/react/24/outline'
+import clsx from 'clsx'
+import { StaticImageData } from 'next/image'
+import { useState } from 'react'
+
+interface Props {
+    className?: string
+    thumbnailSrc: StaticImageData
+    thumbnailAlt: string
+    thumbnailSizes: string
+    videoId: string
+    priority?: boolean
+}
+
+export function YouTubeThumbnail(props: Props) {
+    const [open, setOpen] = useState(false)
+
+    const joinedClassName = clsx(props.className, 'relative')
+
+    return (
+        <>
+            <div className={joinedClassName}>
+                <MyImage
+                    className="object-cover"
+                    src={props.thumbnailSrc}
+                    alt={props.thumbnailAlt}
+                    sizes={props.thumbnailSizes}
+                    priority={props.priority}
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <button
+                        onClick={() => setOpen(true)}
+                        className="peer z-10 flex h-20 w-20 items-center justify-center rounded-full bg-gray-900/60 transition-colors hover:bg-primary-600 focus:outline-none"
+                        aria-label="Play video">
+                        <PlayIcon
+                            fill="currentColor"
+                            className="-mr-0.5 h-10 w-10 text-white"
+                        />
+                    </button>
+                    <div className="animate-play-button-ping absolute h-28 w-28 rounded-full bg-gray-900/40 peer-hover:bg-primary-600/10 transition-colors"></div>
+                </div>
+            </div>
+            <ModalWithYouTubeVideo
+                videoId={props.videoId}
+                open={open}
+                setOpen={setOpen}
+            />
+        </>
+    )
+}

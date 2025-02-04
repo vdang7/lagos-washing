@@ -1,0 +1,53 @@
+@tailwind utilities;
+
+/* Base */
+.rounded-button-with-icon {
+    @apply inline-flex items-center rounded-full shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+}
+
+.rounded-outline-button-with-icon {
+    @apply inline-flex items-center rounded-full shadow-sm ring-1 ring-inset;
+}
+
+/* Sizes */
+@responsive {
+    .rounded-button-with-icon-xs {
+        @apply px-3 py-1 text-xs font-semibold;
+
+        .button-icon-mr {
+            @apply -mr-0.5;
+        }
+    }
+
+    .rounded-button-with-icon-sm {
+        @apply px-3.5 py-1 text-sm font-semibold;
+
+        .button-icon-mr {
+            @apply -mr-0.5;
+        }
+    }
+
+    .rounded-button-with-icon-base {
+        @apply px-4 py-1.5 text-sm font-semibold;
+
+        .button-icon-mr {
+            @apply -mr-0.5;
+        }
+    }
+
+    .rounded-button-with-icon-lg {
+        @apply px-4 py-2 text-sm font-semibold;
+
+        .button-icon-mr {
+            @apply -mr-0.5;
+        }
+    }
+
+    .rounded-button-with-icon-xl {
+        @apply px-5 py-2.5 text-sm font-semibold;
+
+        .button-icon-mr {
+            @apply -mr-1;
+        }
+    }
+}

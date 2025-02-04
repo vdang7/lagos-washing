@@ -1,0 +1,106 @@
+'use client'
+
+import { ModalWithYouTubeVideo } from '@/components/ModalWithYouTubeVideo'
+import { MyImage } from '@/components/MyImage'
+import { PlayCircleIcon } from '@heroicons/react/20/solid'
+import clsx from 'clsx'
+import { StaticImageData } from 'next/image'
+import { useEffect, useRef, useState } from 'react'
+
+interface Props {
+    className?: string
+    thumbnailSrc: StaticImageData
+    thumbnailAlt: string
+    thumbnailSizes: string
+    videoId: string
+    priority?: boolean
+}
+
+export function YouTubeThumbnail(props: Props) {
+
+    const joinedClassName = clsx(props.className, 'group relative cursor-pointer')
+
+    const [pageLoaded, setPageLoaded] = useState(false);
+    const [openModal, setOpenModal] = useState(false)
+    const videoRef = useRef<HTMLIFrameElement>(null);
+
+    const playVideo = () => {
+        if (videoRef.current && videoRef.current.contentWindow) {
+            videoRef.current.contentWindow.postMessage({"method":"play"},"*");
+        }
+    };
+
+    const pauseVideo = () => {
+        if (videoRef.current && videoRef.current.contentWindow) {
+            videoRef.current.contentWindow.postMessage({"method":"pause"},"*");
+        }
+    };
+
+    useEffect(() => {
+        if(document.readyState === "complete") {
+            setPageLoaded(true)
+        }
+        else {
+            document.addEventListener('readystatechange', (event) => { 
+                const target = event.target as Document;
+
+                if (target.readyState === "complete") {
+                    setPageLoaded(true)
+                }
+            }, { once: true });
+        }
+    },[])
+
+    useEffect(() => {
+        if (openModal) {
+            pauseVideo();
+        }
+        if(!openModal && pageLoaded) {
+            playVideo();
+        }
+    }, [openModal]);
+
+    return (
+        <>
+            <div onClick={() => setOpenModal(true)} className={joinedClassName}>
+                <MyImage
+                    className="object-cover"
+                    src={props.thumbnailSrc}
+                    alt={props.thumbnailAlt}
+                    sizes={props.thumbnailSizes}
+                    priority={props.priority}
+                />
+                { pageLoaded && <>       
+                    <iframe
+                        ref={videoRef}
+                        className="pointer-events-none absolute inset-0"
+                        src="https://player.vimeo.com/video/983301604?background=1&keyboard=0&playsinline=1&player_id=0&app_id=58479" 
+                        width="1280" 
+                        height="720" 
+                        frameBorder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        title="Intro">
+                    </iframe>
+                </>
+                }
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="relative" aria-label="Play video">
+                        <div className="animate-play-button-ping left-1/2 top-1/2 absolute w-[135%] h-[148%] bg-gray-900/40 group-hover:bg-primary-600/40 rounded-full transition-colors"></div>
+                        <div className="rounded-full relative flex items-center bg-gray-900/60 group-hover:bg-primary-600 text-white font-bold px-[1.375rem] py-2.5 transition-colors">
+                            <PlayCircleIcon
+                                fill="currentColor"
+                                className="h-5 w-5 mr-1.5"
+                            />
+                            Play    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ModalWithYouTubeVideo
+                videoId={props.videoId}
+                open={openModal}
+                setOpen={setOpenModal}
+            />
+        </>
+    )
+}

@@ -1,0 +1,46 @@
+.button-primary {
+    @apply bg-primary-400 text-primary-950 hover:bg-primary-500 focus-visible:outline-primary-600;
+    --buttonGradient: var(--buttonPrimaryGradient);
+    --buttonHoverGradient: var(--buttonPrimaryHoverGradient);
+
+    --buttonIconColor: theme('colors.primary.950');
+    --buttonIconHoverColor: theme('colors.primary.950');
+}
+
+.button-primary-light {
+    @apply bg-primary-50 text-primary-700 hover:bg-white focus-visible:outline-primary-50;
+
+    --buttonIconColor: theme('colors.primary.300');
+    --buttonIconHoverColor: theme('colors.primary.600');
+}
+
+.button-gray-dark {
+    @apply bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-900;
+
+    --buttonGradient: var(--buttonGrayDarkGradient);
+    --buttonHoverGradient: var(--buttonGrayDarkHoverGradient);
+
+    --buttonIconColor: theme('colors.gray.400');
+    --buttonIconHoverColor: theme('colors.white');
+}
+
+.button-outline-primary-light {
+    @apply text-white ring-primary-200 hover:bg-white/10 hover:ring-white;
+
+    --buttonIconColor: theme('colors.primary.200');
+    --buttonIconHoverColor: theme('colors.white');
+}
+
+.button-outline-primary-light-text-dark {
+    @apply text-primary-700 ring-primary-200 hover:bg-primary-50 hover:ring-primary-50;
+
+    --buttonIconColor: theme('colors.primary.300');
+    --buttonIconHoverColor: theme('colors.primary.300');
+}
+
+.button-outline-gray-dark-transparent {
+    @apply text-gray-950 ring-gray-950/10 hover:bg-primary-50 hover:text-primary-600 hover:ring-primary-50;
+
+    --buttonIconColor: theme('colors.gray.400');
+    --buttonIconHoverColor: theme('colors.primary.300');
+}

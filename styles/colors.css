@@ -1,0 +1,147 @@
+.bg-white\/5 {
+    --sectionTitleColor: theme('colors.white');
+    --sectionBodyColor: theme('colors.gray.300');
+
+    --textButtonColor: theme('colors.primary.400');
+    --textButtonHoverColor: theme('colors.primary.400');
+    --textButtonIconColor: theme('colors.primary.400');
+    --textButtonIconHoverColor: theme('colors.primary.400');
+}
+
+.bg-white,
+.bg-gray-50 {
+    --textBoldColor: theme('colors.gray.900');
+    --textLinkColor: theme('colors.primary.700');
+    --textLinkHoverColor: theme('colors.gray.900');
+
+    --sectionTitleColor: theme('colors.gray.900');
+    --sectionSubtitleColor: theme('colors.primary.700');
+    --sectionBodyColor: theme('colors.gray.600');
+
+    --textButtonColor: theme('colors.primary.700');
+    --textButtonHoverColor: theme('colors.gray.900');
+    --textButtonIconColor: theme('colors.primary.300');
+    --textButtonIconHoverColor: theme('colors.gray.900');
+
+    --textButtonColorInverted: theme('colors.gray.900');
+    --textButtonHoverColorInverted: theme('colors.primary.600');
+    --textButtonIconColorInverted: theme('colors.gray.900');
+    --textButtonIconHoverColorInverted: theme('colors.primary.300');
+
+    --itemTitleColor: theme('colors.gray.900');
+    --itemSubtitleColor: theme('colors.gray.600');
+    --itemBodyColor: theme('colors.gray.600');
+    --itemIconColor: theme('colors.primary.600');
+
+    --errorIconBoxColor: theme('colors.pink.100');
+    --errorIconColor: theme('colors.pink.600');
+    --errorTextColor: theme('colors.pink.700');
+}
+
+.bg-white {
+    --sectionBackgroundColor: theme('colors.white');
+
+    --stackAvatarsBoxTextBoldColor: theme('colors.primary.400');
+
+    --itemReviewsSummaryCardStarColor: theme('colors.primary.400');
+    --itemReviewsSummaryCardTextColor: theme('colors.primary.900');    
+}
+
+.bg-gray-50 {
+    --sectionBackgroundColor: theme('colors.gray.50');
+
+    --stackReviewsSpotlightAvatarRingColor: theme('colors.gray.50');
+    --stackReviewsSpotlightBoxBackgroundColor: theme('colors.primary.50');
+    --stackReviewsSpotlightBoxTextColor: theme('colors.primary.700');
+    --stackReviewsSpotlightBoxTextBoldColor: theme('colors.primary.700');
+    --stackReviewsSpotlightBoxBorderColor: theme('colors.gray.50');
+    --stackReviewsSpotlightBoxRingColor: theme('colors.gray.50');
+    --stackReviewsSpotlightTitleColor: theme('colors.gray.600');
+    --stackReviewsSpotlightBodyColor: theme('colors.primary.700');
+    --stackReviewsSpotlightBodyBoldColor: theme('colors.primary.700');
+}
+
+.bg-primary-50 {
+    --itemReviewsSummaryCardStarColor: theme('colors.primary.200');
+    --itemReviewsSummaryCardTextColor: theme('colors.primary.700');
+}
+
+.bg-primary-100 {
+    --itemReviewsSummaryCardStarColor: theme('colors.primary.300');
+    --itemReviewsSummaryCardTextColor: theme('colors.primary.700');
+}
+
+.bg-primary-200 {
+    --itemReviewsSummaryCardStarColor: theme('colors.primary.600');
+    --itemReviewsSummaryCardTextColor: theme('colors.primary.900');
+}
+
+.bg-primary-400 {
+    --sectionTitleColor: theme('colors.gray.900');
+    --sectionSubtitleColor: theme('colors.primary.950');
+    --sectionBodyColor: theme('colors.primary.700');
+
+    --stackReviewsSpotlightAvatarRingColor: theme('colors.primary.400');
+    --stackReviewsSpotlightBoxBackgroundColor: theme('colors.primary.300');
+    --stackReviewsSpotlightBoxTextColor: theme('colors.primary.900');
+    --stackReviewsSpotlightBoxTextBoldColor: theme('colors.primary.800');
+    --stackReviewsSpotlightBoxBorderColor: theme('colors.primary.400');
+    --stackReviewsSpotlightBoxRingColor: theme('colors.primary.200');
+    --stackReviewsSpotlightTitleColor: theme('colors.primary.950');
+    --stackReviewsSpotlightBodyColor: theme('colors.primary.950');
+    --stackReviewsSpotlightBodyBoldColor: theme('colors.primary.950');
+}
+
+.bg-primary-600 {
+    --sectionBackgroundColor: theme('colors.primary.600');
+    --sectionTitleColor: theme('colors.white');
+    --sectionSubtitleColor: theme('colors.primary.100');
+    --sectionBodyColor: theme('colors.primary.200');
+
+    --textButtonColor: theme('colors.white');
+    --textButtonHoverColor: theme('colors.white');
+    --textButtonIconColor: theme('colors.primary.300');
+    --textButtonIconHoverColor: theme('colors.white');
+}
+.bg-transparent-secondary-950,
+.bg-secondary-800\/40,
+.bg-secondary-900\/40 {
+    --itemReviewsSummaryCardStarColor: theme('colors.primary.400');
+    --itemReviewsSummaryCardTextColor: theme('colors.primary.200');
+}
+
+.bg-secondary-950 {
+    --sectionBackgroundColor: theme('colors.secondary.950');
+
+    --textBoldColor: theme('colors.primary.200');
+
+    --sectionTitleColor: theme('colors.white');
+    --sectionBodyColor: theme('colors.primary.300');
+    --sectionSubtitleColor: theme('colors.primary.400');
+
+    --textButtonColor: theme('colors.primary.200');
+    --textButtonHoverColor: theme('colors.white');
+    --textButtonIconColor: theme('colors.primary.400');
+    --textButtonIconHoverColor: theme('colors.white');
+
+    --itemTitleColor: theme('colors.white');
+    --itemBodyColor: theme('colors.primary.300');
+    --itemIconColor: theme('colors.primary.400');
+
+    --stackReviewsSpotlightAvatarRingColor: theme('colors.secondary.950');
+    --stackReviewsSpotlightBoxBackgroundColor: theme('colors.secondary.900');
+    --stackReviewsSpotlightBoxTextColor: theme('colors.white');
+    --stackReviewsSpotlightBoxTextBoldColor: theme('colors.secondary.300');
+    --stackReviewsSpotlightBoxBorderColor: theme('colors.secondary.950');
+    --stackReviewsSpotlightBoxRingColor: theme('colors.secondary.600');
+    --stackReviewsSpotlightTitleColor: theme('colors.white');
+    --stackReviewsSpotlightBodyColor: theme('colors.primary.300');
+    --stackReviewsSpotlightBodyBoldColor: theme('colors.primary.400');
+
+    --stackAvatarsBoxTextColor: theme('colors.primary.400');
+    --stackAvatarsBoxTextBoldColor: theme('colors.primary.200');
+
+    --errorIconBoxColor: theme('colors.pink.700');
+    --errorIconColor: theme('colors.white');
+    --errorTextColor: theme('colors.pink.300');
+}

@@ -1,0 +1,87 @@
+'use client'
+import FormInput from '@/components/Forms/FormInput'
+import { FormLabel } from '@/components/Forms/FormLabel'
+import { FormError } from '@/components/Forms/FormError'
+import clsx from 'clsx'
+import { FormNetlify } from '@/components/Forms/FormNetlify'
+import { IconChevronAnimated } from '@/components/IconChevronAnimated'
+import { z, ZodType } from 'zod'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+
+interface Props {
+    className?: string
+}
+
+type FormData = {
+    email: string
+}
+
+const EMAIL_MAX_LENGTH = 254
+
+export function FormNewsletter({ className }: Props) {
+    const joinedClassName = clsx(className)
+
+    const schema: ZodType<FormData> = z.object({
+        email: z
+            .string()
+            .email()
+            .max(
+                EMAIL_MAX_LENGTH,
+                `Please make your email shorter than ${EMAIL_MAX_LENGTH} characters`
+            )
+            .trim(),
+    })
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<FormData>({
+        resolver: zodResolver(schema),
+    })
+
+    const onSubmit = (data: FormData, event: any) => {
+        // console.log("IT WORKED", data);
+        event.target.submit()
+    }
+
+    return (
+        <>
+            <FormNetlify
+                name="newsletter"
+                className={joinedClassName}
+                onSubmit={handleSubmit(onSubmit)}>
+                <FormLabel htmlFor="email-address" className="sr-only">
+                    Email address
+                </FormLabel>
+                <FormInput
+                    id="email-address"
+                    className="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm outline-none ring-1 ring-inset ring-white/10 placeholder:text-primary-300 focus:ring-2 focus:ring-inset focus:ring-primary-500 sm:text-sm/6"
+                    type="email"
+                    autoComplete="email"
+                    placeholder="Enter your email"
+                    maxLength={EMAIL_MAX_LENGTH}
+                    required={true}
+                    {...register('email')}
+                />
+                {errors.email && (
+                    <FormError className="mt-4">
+                        {errors.email.message}
+                    </FormError>
+                )}
+                <div className="mt-4">
+                    <button
+                        type="submit"
+                        className="group button-outline-primary-light rounded-button-with-icon-xl lg:rounded-button-with-icon-lg rounded-outline-button-with-icon flex w-full items-center justify-center">
+                        Subscribe
+                        <IconChevronAnimated
+                            className="button-icon-mr ml-2.5"
+                            color="stroke-[--buttonIconColor] group-hover:stroke-[--buttonIconHoverColor]"
+                        />
+                    </button>
+                </div>
+            </FormNetlify>
+        </>
+    )
+}

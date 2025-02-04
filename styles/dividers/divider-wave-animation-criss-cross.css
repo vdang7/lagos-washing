@@ -1,0 +1,32 @@
+/* Animation */
+
+.path1 {
+    animation: divider-keyframes2 16s cubic-bezier(0.55, 0.5, 0.45, 0.5)
+        infinite;
+}
+.path2 {
+    animation: divider-keyframes 16s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.path3 {
+    animation: divider-keyframes2 8s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.path4 {
+    animation: divider-keyframes 8s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+@keyframes divider-keyframes {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+@keyframes divider-keyframes2 {
+    0% {
+        transform: translate3d(85px, 0, 0);
+    }
+    100% {
+        transform: translate3d(-90px, 0, 0);
+    }
+}
