@@ -22,6 +22,9 @@ export function HomeLogosSection() {
                             <h2 className="text-lg font-semibold tracking-tight text-[--sectionTitleColor] sm:text-2xl sm:font-bold">
                                 Trusted by businesses in Raleigh
                             </h2>
+                            <p className="mt-4 text-gray-600 text-sm">
+                                Earn $25 for each customer you refer to us.
+                            </p>
                         </div>
                         <div className="mt-10 lg:col-span-7 lg:mt-0">
                             <div className="mx-auto flex max-w-lg items-center justify-center gap-y-10 sm:max-w-xl lg:mx-0 lg:max-w-none lg:grid-cols-3">
